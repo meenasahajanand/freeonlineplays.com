@@ -582,6 +582,25 @@ button {
     font-weight: 700;
     color: #777;
 }
+.ad-container {
+    width: 100%;
+    margin: 30px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90px;
+}
+.ad-container > div {
+    width: 100%;
+    max-width: 970px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 header {
     height: 60px;
     background-color: #fff;
