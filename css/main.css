@@ -601,6 +601,15 @@ button {
     justify-content: center;
     align-items: center;
 }
+.ad-container-native {
+    width: 100%;
+    margin: 20px 0;
+    display: block;
+}
+.ad-container-native > div {
+    width: 100%;
+    display: block;
+}
 header {
     height: 60px;
     background-color: #fff;
