@@ -1486,6 +1486,34 @@ footer .container a:hover {
         overflow: visible !important;
         margin: 0 !important;
         padding: 0 !important;
+        position: relative !important;
+    }
+    
+    /* Hide script tags inside 2nd ads - they should not be visible */
+    .section .s_box .ad script,
+    .section .s_box .ad #div-gpt-ad-1766468250120-0 script,
+    .section .s_box .ad div[style*="width: 970px"] script,
+    .section .s_box .ad div[style*="width:970px"] script {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        opacity: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+    }
+    
+    /* Ensure ad container properly displays the ad content */
+    .section .s_box .ad #div-gpt-ad-1766468250120-0:empty {
+        min-height: 250px !important;
+    }
+    
+    /* Make sure iframe or amp-img is visible when ad loads */
+    .section .s_box .ad #div-gpt-ad-1766468250120-0 iframe,
+    .section .s_box .ad #div-gpt-ad-1766468250120-0 amp-img,
+    .section .s_box .ad #div-gpt-ad-1766468250120-0 > div:not(script) {
+        display: block !important;
+        visibility: visible !important;
     }
 
     /* Make the inner iframe of 2nd ad responsive - EXACTLY same as 1st */
