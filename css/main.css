@@ -1548,12 +1548,33 @@ footer .container a:hover {
         padding: 0 10px !important;
         box-sizing: border-box !important;
         margin: 15px 0 !important;
+        overflow: visible !important;
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
     }
     
     /* Alternative selector for browsers that don't support :has() */
     .section .s_box #div-gpt-ad-1766468250120-0 {
         width: 100% !important;
         max-width: 100% !important;
+    }
+    
+    /* Ensure parent containers don't cut the ads */
+    .section .s_box:has(#div-gpt-ad-1766468250120-0) .ad,
+    .section .s_box .ad:has(#div-gpt-ad-1766468250120-0) {
+        overflow: visible !important;
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+    }
+    
+    /* Remove any height restrictions from parent divs */
+    .section .s_box .ad > div[style*="height: 90px"],
+    .section .s_box .ad > div[style*="height:90px"] {
+        height: auto !important;
+        min-height: 250px !important;
+        max-height: none !important;
     }
     
     
