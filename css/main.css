@@ -1457,7 +1457,9 @@ footer .container a:hover {
     .section .s_box .ad > div[style*="width: 970px"],
     .section .s_box .ad > div[style*="width:970px"],
     .section .s_box .ad > div[style*="width: 970px;"],
-    .section .s_box .ad > div[style*="width:970px;"] {
+    .section .s_box .ad > div[style*="width:970px;"],
+    .section .s_box .ad > div[style*="width: 970px;height"],
+    .section .s_box .ad > div[style*="width:970px;height"] {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
@@ -1502,17 +1504,33 @@ footer .container a:hover {
         padding: 0 !important;
     }
     
-    /* All inner divs of 2nd ads */
+    /* All inner divs and amp-img of 2nd ads - EXACTLY same as 1st */
     .section .s_box .ad div[style*="width: 970px"] > div,
     .section .s_box .ad div[style*="width:970px"] > div,
     .section .s_box .ad #div-gpt-ad-1766468250120-0 > div,
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 > * {
+    .section .s_box .ad #div-gpt-ad-1766468250120-0 > *,
+    .section .s_box .ad #div-gpt-ad-1766468250120-0 amp-img,
+    .section .s_box .ad div[style*="width: 970px"] amp-img,
+    .section .s_box .ad div[style*="width:970px"] amp-img {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
         height: auto !important;
+        min-height: 250px !important;
         box-sizing: border-box !important;
         overflow: visible !important;
+        display: block !important;
+    }
+    
+    /* amp-img inner img - make it responsive */
+    .section .s_box .ad amp-img img,
+    .section .s_box .ad #div-gpt-ad-1766468250120-0 amp-img img,
+    .section .s_box .ad div[style*="width: 970px"] amp-img img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        box-sizing: border-box !important;
     }
     
     .section .s_box .ad p {
@@ -1523,14 +1541,19 @@ footer .container a:hover {
         width: 100% !important;
     }
     
-    /* Ensure s_box containing 2nd ads has same styling */
-    .section .s_box:has(#div-gpt-ad-1766468250120-0),
-    .section .s_box #div-gpt-ad-1766468250120-0 {
+    /* Ensure s_box containing 2nd ads has same styling as mobile-ad-wrapper */
+    .section .s_box:has(#div-gpt-ad-1766468250120-0) {
         width: 100% !important;
         max-width: 100% !important;
         padding: 0 10px !important;
         box-sizing: border-box !important;
         margin: 15px 0 !important;
+    }
+    
+    /* Alternative selector for browsers that don't support :has() */
+    .section .s_box #div-gpt-ad-1766468250120-0 {
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     
