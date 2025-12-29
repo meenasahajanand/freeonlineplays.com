@@ -1469,14 +1469,23 @@ footer .container a:hover {
         min-height: 90px !important;
         display: block !important;
     }
-    
+
+    /* Make the inner iframe of 2nd ad responsive */
+    .section .s_box .ad #div-gpt-ad-1766468250120-0 iframe {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        display: block !important;
+    }
+
     .section .s_box .ad div[style*="width: 970px"] > div,
     .section .s_box .ad div[style*="width:970px"] > div {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
     }
-    
+
     .section .s_box .ad p {
         margin-top: 8px;
         font-size: 12px;
