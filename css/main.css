@@ -1360,8 +1360,14 @@ footer .container a:hover {
     }
     
     /* Hide 3rd ads in original position on mobile - will be moved by JavaScript */
-    .section .s_box:has(#div-gpt-ad-1766468285021-0) {
+    /* Using direct ID selector instead of :has() for better browser support */
+    .section .s_box #div-gpt-ad-1766468285021-0 {
         display: none;
+    }
+    
+    /* Show the ad box when it's moved to mobile wrapper */
+    .section .mobile-ad-wrapper #div-gpt-ad-1766468285021-0 {
+        display: block !important;
     }
     
     /* Mobile Ad Wrapper and Label - Show after navigation */
@@ -1398,6 +1404,10 @@ footer .container a:hover {
         padding: 0;
     }
     
+    .section .mobile-ad-wrapper .mobile-third-ad {
+        display: block !important;
+    }
+    
     .section .mobile-ad-wrapper .mobile-third-ad .ad {
         width: 100%;
         max-width: 100%;
@@ -1413,7 +1423,13 @@ footer .container a:hover {
         min-width: 100% !important;
     }
     
-    .section .mobile-ad-wrapper .mobile-third-ad #div-gpt-ad-1766468285021-0 {
+    .section .mobile-ad-wrapper .mobile-third-ad .ad div[style*="width: 800px"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+    
+    .section .mobile-ad-wrapper #div-gpt-ad-1766468285021-0 {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;

@@ -17,6 +17,7 @@
         // Find the 3rd ads element
         const thirdAdElement = document.getElementById('div-gpt-ad-1766468285021-0');
         if (!thirdAdElement) {
+            console.log('Third ad element not found');
             return;
         }
         
@@ -55,6 +56,9 @@
         // Insert after navigation (right after the <p class="navigation"> element)
         // Use insertAdjacentElement for better control
         navigation.insertAdjacentElement('afterend', adWrapper);
+        
+        // Force show the ad element
+        thirdAdElement.style.display = 'block';
     }
     
     function restoreOriginalAd() {
