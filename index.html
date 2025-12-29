@@ -100,8 +100,18 @@ gtag('config', 'AW-17830652928');
 
     
 
+    <!-- Mobile Hamburger Menu Button -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
     <div class="main container">
-        <div class="aside">
+        <div class="aside" id="mobileSidebar">
             <div class="header">
                 <div class="logo">
 <a href="index-2.html" >
@@ -565,6 +575,70 @@ gtag('config', 'AW-17830652928');
 
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2d0e241130bf4b05b6cb445ce454da0a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>
+    // Mobile Menu Toggle Functionality
+    (function() {
+        const menuToggle = document.getElementById('mobileMenuToggle');
+        const sidebar = document.getElementById('mobileSidebar');
+        const overlay = document.getElementById('mobileMenuOverlay');
+        
+        if (menuToggle && sidebar && overlay) {
+            function toggleMenu(e) {
+                if (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            }
+            
+            function closeMenu(e) {
+                if (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+            
+            // Only toggle menu when hamburger button is clicked
+            menuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleMenu(e);
+                return false;
+            });
+            
+            // Close menu when overlay is clicked (only when active)
+            overlay.addEventListener('click', function(e) {
+                if (overlay.classList.contains('active')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeMenu(e);
+                    return false;
+                }
+            });
+            
+            // Close menu when clicking on a link inside sidebar
+            const menuLinks = sidebar.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        // Don't prevent default - let the link work
+                        // Just close the menu after a short delay
+                        setTimeout(function() {
+                            closeMenu();
+                        }, 100);
+                    }
+                });
+            });
+        }
+    })();
+</script>
 </body>
 
 <!-- Mirrored from skillgame24.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Dec 2025 09:03:01 GMT -->
