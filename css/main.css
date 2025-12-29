@@ -1359,14 +1359,15 @@ footer .container a:hover {
         margin-bottom: 10px;
     }
     
-    /* Hide 3rd ads in original position on mobile - will be moved by JavaScript */
+    /* Hide 1st ads in original position on mobile - will be moved by JavaScript */
     /* Using direct ID selector instead of :has() for better browser support */
-    .section .s_box #div-gpt-ad-1766468285021-0 {
+    .section .ad_box #div-gpt-ad-1766468198292-0,
+    .section .game_box .ad_box #div-gpt-ad-1766468198292-0 {
         display: none;
     }
     
     /* Show the ad box when it's moved to mobile wrapper */
-    .section .mobile-ad-wrapper #div-gpt-ad-1766468285021-0 {
+    .section .mobile-ad-wrapper #div-gpt-ad-1766468198292-0 {
         display: block !important;
     }
     
@@ -1397,18 +1398,18 @@ footer .container a:hover {
         letter-spacing: 0.5px;
     }
     
-    /* Show 3rd ads after navigation on mobile */
-    .section .mobile-third-ad {
+    /* Show 1st ads after navigation on mobile */
+    .section .mobile-first-ad {
         display: block !important;
         margin: 0;
         padding: 0;
     }
     
-    .section .mobile-ad-wrapper .mobile-third-ad {
+    .section .mobile-ad-wrapper .mobile-first-ad {
         display: block !important;
     }
     
-    .section .mobile-ad-wrapper .mobile-third-ad .ad {
+    .section .mobile-ad-wrapper .mobile-first-ad .ad {
         width: 100%;
         max-width: 100%;
         display: flex;
@@ -1417,19 +1418,20 @@ footer .container a:hover {
         align-items: center;
     }
     
-    .section .mobile-ad-wrapper .mobile-third-ad .ad > div {
+    .section .mobile-ad-wrapper .mobile-first-ad .ad > div {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
     }
     
-    .section .mobile-ad-wrapper .mobile-third-ad .ad div[style*="width: 800px"] {
+    .section .mobile-ad-wrapper .mobile-first-ad .ad div[style*="width: 336px"],
+    .section .mobile-ad-wrapper .mobile-first-ad .ad div[style*="width: 800px"] {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
     }
     
-    .section .mobile-ad-wrapper #div-gpt-ad-1766468285021-0 {
+    .section .mobile-ad-wrapper #div-gpt-ad-1766468198292-0 {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
