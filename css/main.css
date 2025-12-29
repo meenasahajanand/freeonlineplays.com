@@ -1358,6 +1358,68 @@ footer .container a:hover {
         margin-right: 10px;
         margin-bottom: 10px;
     }
+    
+    /* Hide 3rd ads in original position on mobile - will be moved by JavaScript */
+    .section .s_box:has(#div-gpt-ad-1766468285021-0) {
+        display: none;
+    }
+    
+    /* Mobile Ad Wrapper and Label - Show after navigation */
+    .section .navigation + .mobile-ad-wrapper {
+        display: block !important;
+        margin: 15px 0;
+        padding: 0 10px;
+        width: 100%;
+    }
+    
+    .mobile-ad-wrapper {
+        display: block !important;
+        margin: 15px 0;
+        padding: 0 10px;
+        width: 100%;
+    }
+    
+    .mobile-ad-label {
+        display: block !important;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
+        color: #777;
+        margin-bottom: 8px;
+        padding: 5px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    /* Show 3rd ads after navigation on mobile */
+    .section .mobile-third-ad {
+        display: block !important;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .section .mobile-ad-wrapper .mobile-third-ad .ad {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section .mobile-ad-wrapper .mobile-third-ad .ad > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+    
+    .section .mobile-ad-wrapper .mobile-third-ad #div-gpt-ad-1766468285021-0 {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        min-height: 250px !important;
+        display: block !important;
+    }
 }
 
 /* Small Mobile Devices */
