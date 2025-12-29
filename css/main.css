@@ -1498,6 +1498,102 @@ footer .container a:hover {
         width: 100% !important;
         max-width: 100% !important;
     }
+    
+    /* 3rd ads mobile view styling - make it responsive */
+    .section .s_box .ad #div-gpt-ad-1766468285021-0 {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important;
+        display: block !important;
+    }
+    
+    .section .s_box .ad > div[style*="width: 800px"],
+    .section .s_box .ad > div[style*="width:800px"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important;
+        display: block !important;
+    }
+    
+    /* All ads in s_box should be responsive on mobile */
+    .section .s_box {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    
+    .section .s_box .ad {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    /* Make all ad containers responsive */
+    .section .s_box .ad > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+    
+    /* 1st ads in ad_box - mobile responsive (when not moved) */
+    .section .game_box .ad_box {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    .section .game_box .ad_box .ad {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section .game_box .ad_box .ad #div-gpt-ad-1766468198292-0 {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important;
+        display: block !important;
+    }
+    
+    /* Ad container responsive */
+    .ad-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important;
+        box-sizing: border-box;
+    }
+    
+    .ad-container > div {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Native ad container responsive */
+    .ad-container-native {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .ad-container-native > div {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 }
 
 /* Small Mobile Devices */
