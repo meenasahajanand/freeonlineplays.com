@@ -1439,7 +1439,7 @@ footer .container a:hover {
         display: block !important;
     }
     
-    /* 2nd ads mobile view styling - make it vertical box, not horizontal */
+    /* 2nd ads mobile view styling - same as 1st ads style */
     .section .s_box .ad {
         width: 100%;
         max-width: 100%;
@@ -1447,45 +1447,62 @@ footer .container a:hover {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 0;
         box-sizing: border-box;
+        margin: 0;
+        overflow: visible;
     }
     
+    /* 2nd ads container - same style as 1st ads */
     .section .s_box .ad > div[style*="width: 970px"],
     .section .s_box .ad > div[style*="width:970px"] {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
         height: auto !important;
-        min-height: 90px !important;
+        min-height: 250px !important;
+        max-height: none !important;
         display: block !important;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: visible !important;
     }
     
+    /* 2nd ads element itself - same as 1st ads */
     .section .s_box .ad #div-gpt-ad-1766468250120-0 {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
         height: auto !important;
-        min-height: 90px !important;
+        min-height: 250px !important;
+        max-height: none !important;
         display: block !important;
+        box-sizing: border-box;
+        overflow: visible !important;
     }
 
-    /* Make the inner iframe of 2nd ad responsive */
+    /* Make the inner iframe of 2nd ad responsive - same as 1st */
     .section .s_box .ad #div-gpt-ad-1766468250120-0 iframe {
         width: 100% !important;
         height: auto !important;
         max-width: 100% !important;
         min-width: 100% !important;
+        min-height: 250px !important;
         display: block !important;
+        box-sizing: border-box;
+        overflow: visible !important;
     }
-
+    
     .section .s_box .ad div[style*="width: 970px"] > div,
     .section .s_box .ad div[style*="width:970px"] > div {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
+        height: auto !important;
+        box-sizing: border-box;
+        overflow: visible !important;
     }
-
+    
     .section .s_box .ad p {
         margin-top: 8px;
         font-size: 12px;
