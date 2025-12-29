@@ -111,13 +111,25 @@
     </script>
 
     <script>
-        window.googletag = window.googletag || { cmd: [] };
-        googletag.cmd.push(function () {
-            googletag.defineSlot('/23330730517/freeonlineplays.com_d2', [970, 90], 'div-gpt-ad-1766468250120-0').addService(googletag.pubads());
-            googletag.pubads().collapseEmptyDivs();
-            googletag.enableServices();
-        });
-    </script>
+                window.googletag = window.googletag || { cmd: [] };
+                googletag.cmd.push(function () {
+                    googletag.defineSlot(
+                        ' /23330730517/freeonlineplays.com_d2',
+                        [
+                            [970, 90],   // Desktop leaderboard
+                            [728, 90],   // Tablet landscape
+                            [468, 60],   // Tablet small
+                            [336, 280],  // Mobile rectangle 
+                            [320, 100],  // Mobile wide banner
+                            [320, 50]    // Mobile standard
+                        ],
+                        "div-gpt-ad-1766468250120-0"
+                    ).addService(googletag.pubads());
+
+                    googletag.pubads().collapseEmptyDivs();
+                    googletag.enableServices();
+                });
+            </script>
 
     <script>
         window.googletag = window.googletag || { cmd: [] };
@@ -434,13 +446,15 @@ gtag('config', 'AW-17830652928');
 
 
             <div class="s_box">
+                   <div class="s_box">
                 <div class="ad" style="text-align:center;">
-                    <div style="width:100%; max-width:970px; margin:auto;">
+                    <!-- <div style="width:100%; max-width:970px; margin:auto;"> -->
                         <!--  /23330730517/freeonlineplays.com_d2 -->
                         <div id="div-gpt-ad-1766468250120-0" style="width:100%; min-height:50px; margin:auto;"></div>
                     </div>
                     <p>Advertisement</p>
-                </div>
+                <!-- </div> -->
+            </div>
             </div>
 
 
