@@ -1,0 +1,1202 @@
+/* ========================================
+   RESPONSIVE STYLES FOR SKILLGAME24.COM
+   Import this file after your main.css
+   ======================================== */
+
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Layout - Keep aside and section side by side */
+.main.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.aside {
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.section {
+    flex: 1;
+    margin-left: 20px;
+    width: 100%;
+    min-width: 0;
+}
+
+/* S_box Styles */
+.s_box {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 24px;
+    margin: 20px 0 15px;
+    font-weight: 600;
+}
+
+.title.grey {
+    color: #333;
+}
+
+/* Grid Layout for Category pages (.gri) */
+.gri {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.gri a,
+.gri .ad {
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.gri .img {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f0f0f0;
+}
+
+.gri .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Box One - Homepage Recommended */
+.box_one {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.box_one a {
+    width: 100%;
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.box_one a:hover {
+    transform: translateY(-3px);
+}
+
+.box_one .img {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f0f0f0;
+}
+
+.box_one .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Box Two - Trending/Popular Games */
+.box_two {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.box_two a,
+.box_two .game_box {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box_two a:hover,
+.box_two .game_box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.box_two .img {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.box_two .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box_two .text {
+    flex: 1;
+    padding: 0 15px;
+    min-width: 0;
+}
+
+.box_two .text h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.box_two .text p {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    color: #666;
+}
+
+.box_two .text p span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Content Info */
+.content_info {
+    width: 100%;
+    overflow: hidden;
+    padding: 8px 5px;
+}
+
+.content_info p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Ad Container */
+.ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 280px;
+    border: 1px dashed #ddd;
+}
+
+.ad > div {
+    width: 100% !important;
+    max-width: 336px;
+    height: auto !important;
+    min-height: 280px;
+}
+
+.ad p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* Public Box Responsive Styles */
+.public_box {
+    width: 75%;
+    max-width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.public_box * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.box_three {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.box_three h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.box_three .dec {
+    width: 100%;
+}
+
+.box_three .dec p {
+    width: 100%;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-size: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+.public_box .content {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.public_box h1,
+.public_box h2,
+.public_box h3,
+.public_box h4,
+.public_box h5,
+.public_box h6 {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin: 15px 0 10px;
+}
+
+.public_box p {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.public_box ul,
+.public_box ol {
+    width: 100%;
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+.public_box li {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin: 5px 0;
+}
+
+.public_box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+}
+
+.public_box table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.public_box table td,
+.public_box table th {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.public_box pre,
+.public_box code {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.public_box iframe,
+.public_box video,
+.public_box embed,
+.public_box object {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Large Desktop - 1400px and above */
+@media (min-width: 1400px) {
+    .main.container {
+        max-width: 1400px;
+    }
+    
+    .aside {
+        width: 280px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 18px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Desktop - 1200px to 1399px */
+@media (max-width: 1399px) {
+    .main.container {
+        max-width: 1200px;
+    }
+    
+    .aside {
+        width: 260px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+}
+
+/* Laptop - 992px to 1199px */
+@media (max-width: 1199px) {
+    .main.container {
+        max-width: 1140px;
+        padding: 0 15px;
+    }
+    
+    .aside {
+        width: 240px;
+    }
+    
+    .section {
+        margin-left: 15px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .box_two {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 10px;
+    }
+}
+
+/* Tablet - 768px to 991px - STILL SIDE BY SIDE */
+@media (max-width: 991px) {
+    .main.container {
+        max-width: 960px;
+        padding: 0 12px;
+    }
+    
+    .aside {
+        width: 200px;
+    }
+    
+    .section {
+        margin-left: 12px;
+    }
+    
+    .header {
+        padding: 12px 8px;
+    }
+    
+    .logo img {
+        max-width: 140px;
+    }
+    
+    .search_input {
+        font-size: 13px;
+        padding: 9px 38px 9px 10px;
+    }
+    
+    .nav ul li a,
+    .small_box ul li a {
+        font-size: 13px;
+        padding: 8px 6px;
+    }
+    
+    .small_box h3 {
+        font-size: 15px;
+    }
+    
+    .title {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 8px;
+    }
+    
+    .box_two {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .box_two .img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .box_two .text {
+        padding: 0 10px;
+    }
+    
+    .box_two .text h3 {
+        font-size: 14px;
+    }
+    
+    .box_two .text p span {
+        font-size: 12px;
+    }
+    
+    .public_box {
+        padding: 15px;
+        width: 80%;
+        max-width: 80%;
+    }
+    
+    .box_three {
+        padding: 15px;
+    }
+    
+    .box_three h3 {
+        font-size: 22px;
+    }
+    
+    .box_three .dec p {
+        font-size: 14px;
+    }
+    
+    .public_box h1 { font-size: 24px; }
+    .public_box h2 { font-size: 22px; }
+    .public_box h3 { font-size: 20px; }
+    .public_box h4 { font-size: 18px; }
+}
+
+/* Mobile Landscape / Small Tablet - 576px to 767px - STACK VERTICALLY */
+@media (max-width: 767px) {
+    .main.container {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .aside {
+        width: 100%;
+        position: static;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .section {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .navigation {
+        font-size: 13px;
+        padding: 8px 5px;
+    }
+    
+    .header {
+        padding: 15px 10px;
+    }
+    
+    .logo {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    
+    .logo img {
+        max-width: 150px;
+        height: auto;
+    }
+    
+    .search_box {
+        width: 100%;
+    }
+    
+    .search_box form {
+        width: 100%;
+    }
+    
+    .search_input {
+        font-size: 14px;
+        padding: 10px 40px 10px 15px;
+        width: 100%;
+    }
+    
+    .search_box button {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .nav ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .nav ul li {
+        flex: 1 1 calc(33.333% - 8px);
+        min-width: 100px;
+    }
+    
+    .nav ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5px;
+        text-align: center;
+    }
+    
+    .small_box {
+        padding: 12px;
+    }
+    
+    .small_box ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .small_box ul li {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 120px;
+    }
+    
+    .title {
+        font-size: 20px;
+        margin: 15px 0 12px;
+        padding: 0 5px;
+    }
+    
+    .s_box {
+        margin-bottom: 25px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .box_two {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .box_two a,
+    .box_two .game_box {
+        padding: 8px;
+    }
+    
+    .box_two .img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .box_two .text {
+        padding: 0 12px;
+    }
+    
+    .box_two .text h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+        line-height: 1.3;
+    }
+    
+    .box_two .text p {
+        font-size: 13px;
+    }
+    
+    .box_two .text p span {
+        font-size: 13px;
+        gap: 3px;
+    }
+    
+    .content_info p {
+        font-size: 13px;
+        padding: 8px 5px;
+    }
+    
+    .footer .small_box ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .footer .small_box ul li {
+        flex: 0 1 auto;
+    }
+    
+    .ad {
+        grid-column: 1 / -1;
+        padding: 20px;
+    }
+    
+    .public_box {
+        padding: 12px 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .box_three {
+        padding: 15px 10px;
+    }
+    
+    .box_three h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .box_three .dec p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    
+    .public_box h1 { font-size: 22px; }
+    .public_box h2 { font-size: 20px; }
+    .public_box h3 { font-size: 18px; }
+    .public_box h4 { font-size: 16px; }
+    
+    .public_box p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .public_box ul,
+    .public_box ol {
+        padding-left: 20px;
+    }
+    
+    .public_box table {
+        font-size: 13px;
+    }
+    
+    .public_box table td,
+    .public_box table th {
+        padding: 6px 8px;
+    }
+}
+
+/* Mobile Portrait - 480px to 575px */
+@media (max-width: 575px) {
+    .main.container {
+        padding: 0 8px;
+    }
+    
+    .header {
+        padding: 12px 8px;
+    }
+    
+    .logo img {
+        max-width: 130px;
+    }
+    
+    .search_input {
+        font-size: 13px;
+        padding: 9px 38px 9px 12px;
+    }
+    
+    .search_box button {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .nav ul li {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    
+    .nav ul li a {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 12px;
+    }
+    
+    .nav ul li a i {
+        margin-right: 8px;
+    }
+    
+    .small_box {
+        padding: 10px;
+    }
+    
+    .small_box h3 {
+        font-size: 16px;
+    }
+    
+    .small_box ul li {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    
+    .title {
+        font-size: 18px;
+        margin: 12px 0 10px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .box_two {
+        gap: 8px;
+    }
+    
+    .box_two a,
+    .box_two .game_box {
+        padding: 8px;
+    }
+    
+    .box_two .img {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .box_two .text {
+        padding: 0 10px;
+    }
+    
+    .box_two .text h3 {
+        font-size: 14px;
+    }
+    
+    .box_two .text p span {
+        font-size: 12px;
+    }
+    
+    .content_info p {
+        font-size: 12px;
+        padding: 6px 4px;
+    }
+    
+    .footer .small_box ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .footer .small_box ul li {
+        text-align: center;
+    }
+    
+    .public_box {
+        padding: 10px 8px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .box_three {
+        padding: 12px 8px;
+    }
+    
+    .box_three h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .box_three .dec p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    
+    .public_box h1 { font-size: 20px; }
+    .public_box h2 { font-size: 18px; }
+    .public_box h3 { font-size: 16px; }
+    .public_box h4 { font-size: 15px; }
+    
+    .public_box p {
+        font-size: 13px;
+    }
+    
+    .public_box ul,
+    .public_box ol {
+        padding-left: 18px;
+    }
+    
+    .public_box li {
+        font-size: 13px;
+    }
+    
+    .public_box table {
+        font-size: 12px;
+    }
+    
+    .public_box table td,
+    .public_box table th {
+        padding: 5px 6px;
+    }
+}
+
+/* Small Mobile - 375px to 479px */
+@media (max-width: 479px) {
+    .logo img {
+        max-width: 110px;
+    }
+    
+    .search_input {
+        font-size: 12px;
+        padding: 8px 36px 8px 10px;
+    }
+    
+    .search_box button {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .title {
+        font-size: 17px;
+        margin: 10px 0 8px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .content_info p {
+        font-size: 12px;
+        padding: 6px 3px;
+    }
+    
+    .box_two .img {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .box_two .text {
+        padding: 0 8px;
+    }
+    
+    .box_two .text h3 {
+        font-size: 13px;
+    }
+    
+    .box_two .text p span {
+        font-size: 11px;
+    }
+}
+
+/* Extra Small Mobile - 320px to 374px */
+@media (max-width: 374px) {
+    .main.container {
+        padding: 0 5px;
+    }
+    
+    .logo img {
+        max-width: 100px;
+    }
+    
+    .search_input {
+        font-size: 11px;
+        padding: 7px 34px 7px 8px;
+    }
+    
+    .search_box button {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .title {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    
+    .content_info p {
+        font-size: 11px;
+        padding: 5px 2px;
+    }
+    
+    .box_two a,
+    .box_two .game_box {
+        padding: 6px;
+    }
+    
+    .box_two .img {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .box_two .text {
+        padding: 0 6px;
+    }
+    
+    .box_two .text h3 {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+    
+    .box_two .text p span {
+        font-size: 10px;
+    }
+    
+    .nav ul li a,
+    .small_box ul li a {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    
+    .iconfont {
+        font-size: 13px;
+    }
+    
+    .public_box {
+        padding: 8px 5px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .box_three {
+        padding: 10px 5px;
+    }
+    
+    .box_three h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .box_three .dec p {
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+    
+    .public_box h1 { font-size: 18px; }
+    .public_box h2 { font-size: 16px; }
+    .public_box h3 { font-size: 15px; }
+    .public_box h4 { font-size: 14px; }
+    
+    .public_box p,
+    .public_box li {
+        font-size: 12px;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .nav ul {
+        flex-direction: row;
+    }
+    
+    .nav ul li {
+        flex: 1 1 calc(33.333% - 8px);
+    }
+    
+    .small_box ul li {
+        flex: 1 1 calc(50% - 8px);
+    }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Typography */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    h4 { font-size: 16px; }
+    h5 { font-size: 14px; }
+    h6 { font-size: 13px; }
+}
+
+/* Touch-friendly for mobile */
+@media (max-width: 767px) {
+    a, button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .gri a,
+    .box_one a,
+    .box_two a {
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+    }
+    
+    .gri a:active,
+    .box_one a:active,
+    .box_two a:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Scrollbar styling for aside on desktop */
+@media (min-width: 768px) {
+    .aside::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .aside::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    .aside::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+    
+    .aside::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+/* Smooth transitions */
+.aside,
+.section,
+.gri,
+.box_one,
+.box_two {
+    transition: all 0.3s ease;
+}
+
+/* Print styles */
+@media print {
+    .aside,
+    .search_box,
+    .footer,
+    .ad {
+        display: none !important;
+    }
+    
+    .section {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .gri,
+    .box_one,
+    .box_two {
+        page-break-inside: avoid;
+    }
+    
+    .public_box {
+        width: 100%;
+        max-width: 100%;
+    }
+}

@@ -9,90 +9,84 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="shortcut icon" href="img/favicon.png">
-
-
-    <style>
-      #link {
-        display: none;
-      }
-
-      div.content {
-        position: fixed;
-        top: 50%;
-      }
-    </style>
+             <link rel="stylesheet" href="css/class-responsive.css">
 
 
 
-    <!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-P66454XE6E"></script>
+ <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P66454XE6E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-P66454XE6E');
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830652928"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17830652928');
+    </script>
+
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'G-P66454XE6E');
-</script> 
+    document.addEventListener('DOMContentLoaded', function () {
 
-<!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830652928"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'AW-17830652928');
-</script> 
+        const adIds = [
+            'div-gpt-ad-1766468198292-0', // D1
+            'div-gpt-ad-1766468250120-0', // D2
+            'div-gpt-ad-1766468285021-0'  // D3
+        ];
 
+        let isOverAd = false;
+
+        adIds.forEach(function (id) {
+            const adEl = document.getElementById(id);
+            if (!adEl) return;
+
+            adEl.addEventListener('mouseenter', function () {
+                isOverAd = true;
+            });
+
+            adEl.addEventListener('mouseleave', function () {
+                isOverAd = false;
+            });
+        });
+
+        window.addEventListener('blur', function () {
+            if (isOverAd) {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    event: 'detail_ck'
+                });
+            }
+        });
+
+    });
+</script>
 
     
 
-     <script type="text/javascript"> 
-    function reward(event, url, type) {
-        document.querySelector(".body-loading").style.display = "flex";
-          setTimeout(function(){
-            showTip(url, type);
-          } , 5000);
-    }
-    function showTip(url, type) { 
-fbq('track', 'Lead');
-        document.querySelector(".body-loading .loader").style.display = "none";
-        document.querySelector(".tooltip").style.display = "block";
-        let text = type === "apple" ? "App Store" : "Google Play";
-        document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
-        document.querySelector(".tooltip-button-continue").href = url;
-        document
-            .querySelector(".tooltip-button-cancel")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-                window.location.reload();
-            });
-        document
-            .querySelector(".tooltip-button-continue")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-            });
-
-
-        try{
-          gtag('event', 'conversion', {'send_to':  'AW-17830652928/UHN4CKeii9cbEIDYqLZC'});
-        }catch(e){
-          console.log(e);
-        }
-    }
-
-    </script>
+   <!-- Google Tag Manager -->
+<!-- <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+ '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-53DGMKRX');
+</script> -->
+<!-- End Google Tag Manager -->
 
 
 </head>
 <body>
-   <!-- Google tag (gtag.js) 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830652928"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'AW-17830652928');
-</script> -->
-
+    <!-- Google Tag Manager (noscript) -->
+<!-- <noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53DGMKRX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> -->
+<!-- End Google Tag Manager (noscript) -->
 
 
     
@@ -244,8 +238,180 @@ gtag('config', 'AW-17830652928');
     <script>
         lazyload()
     </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2d0e241130bf4b05b6cb445ce454da0a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+    <script>
+        
+        // Mobile Navigation Toggle Script
+// Add this script to your HTML file or include it as a separate JS file
 
-<!-- Mirrored from freeonlineplays.com/privacy.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Dec 2025 09:04:53 GMT -->
+(function() {
+  'use strict';
+  
+  let isInitialized = false;
+  
+  function initMobileMenu() {
+    // Prevent multiple initializations
+    if (isInitialized) return;
+    
+    // Get elements
+    const aside = document.querySelector('.aside');
+    const header = document.querySelector('.aside .header');
+    const context = document.querySelector('.aside .context');
+    const footer = document.querySelector('.aside .footer');
+    
+    if (!aside || !header || !context) {
+      console.log('Required elements not found');
+      return;
+    }
+    
+    // Remove any existing mobile menu elements
+    const existingToggle = document.querySelector('.mobile-menu-toggle');
+    const existingClose = document.querySelector('.mobile-menu-close');
+    const existingOverlay = document.querySelector('.mobile-menu-overlay');
+    const existingMobileFooter = document.querySelector('.mobile-footer-box');
+    
+    if (existingToggle) existingToggle.remove();
+    if (existingClose) existingClose.remove();
+    if (existingOverlay) existingOverlay.remove();
+    if (existingMobileFooter) existingMobileFooter.remove();
+    
+    // Create three dots button
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'mobile-menu-toggle';
+    toggleBtn.setAttribute('aria-label', 'Open menu');
+    toggleBtn.type = 'button';
+    header.appendChild(toggleBtn);
+    
+    // Create close button
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'mobile-menu-close';
+    closeBtn.setAttribute('aria-label', 'Close menu');
+    closeBtn.type = 'button';
+    document.body.appendChild(closeBtn);
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-menu-overlay';
+    document.body.appendChild(overlay);
+    
+    // Create mobile footer box (clone from original footer)
+    if (footer) {
+      const mobileFooterBox = document.createElement('div');
+      mobileFooterBox.className = 'mobile-footer-box';
+      
+      // Get the small_box from footer
+      const footerSmallBox = footer.querySelector('.small_box');
+      if (footerSmallBox) {
+        mobileFooterBox.innerHTML = footerSmallBox.innerHTML;
+      }
+      
+      // Append mobile footer box at the end of context
+      context.appendChild(mobileFooterBox);
+    }
+    
+    // Open menu function
+    function openMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Opening menu');
+      
+      // Hide three dots button
+      toggleBtn.classList.add('hide');
+      
+      // Show menu
+      context.classList.add('active');
+      overlay.classList.add('active');
+      closeBtn.classList.add('show');
+      document.body.classList.add('menu-open');
+    }
+    
+    // Close menu function
+    function closeMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Closing menu');
+      
+      // Hide menu
+      context.classList.remove('active');
+      overlay.classList.remove('active');
+      closeBtn.classList.remove('show');
+      document.body.classList.remove('menu-open');
+      
+      // Show three dots button again
+      setTimeout(function() {
+        toggleBtn.classList.remove('hide');
+      }, 300);
+    }
+    
+    // Add event listeners
+    toggleBtn.addEventListener('click', openMenu);
+    toggleBtn.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      openMenu(e);
+    });
+    
+    closeBtn.addEventListener('click', closeMenu);
+    closeBtn.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      closeMenu(e);
+    });
+    
+    overlay.addEventListener('click', closeMenu);
+    overlay.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      closeMenu(e);
+    });
+    
+    // Close menu on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && context.classList.contains('active')) {
+        closeMenu(e);
+      }
+    });
+    
+    // Close menu when clicking on a navigation link
+    const menuLinks = context.querySelectorAll('a');
+    menuLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        setTimeout(function() {
+          if (context.classList.contains('active')) {
+            const fakeEvent = { preventDefault: function() {}, stopPropagation: function() {} };
+            closeMenu(fakeEvent);
+          }
+        }, 200);
+      });
+    });
+    
+    isInitialized = true;
+    console.log('Mobile menu initialized successfully');
+  }
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
+  
+  // Reinitialize on window resize for safety
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      if (window.innerWidth <= 768 && !isInitialized) {
+        initMobileMenu();
+      }
+    }, 250);
+  });
+  
+})();
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2d0e241130bf4b05b6cb445ce454da0a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+ <script>
+    googletag.cmd.push(function () {
+        googletag.display('div-gpt-ad-1766468198292-0');
+        googletag.display('div-gpt-ad-1766468250120-0');
+        googletag.display('div-gpt-ad-1766468285021-0');
+    });
+</script>
+
 </html>

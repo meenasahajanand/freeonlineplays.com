@@ -83,7 +83,7 @@ button {
     text-align: center;
 }
 .aside .header .logo a img {
-    height: 100%;
+    height: 200%;
     cursor: pointer;
 }
 .aside .header .search_box {
@@ -582,34 +582,6 @@ button {
     font-weight: 700;
     color: #777;
 }
-.ad-container {
-    width: 100%;
-    margin: 30px 0;
-    padding: 20px;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90px;
-}
-.ad-container > div {
-    width: 100%;
-    max-width: 970px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.ad-container-native {
-    width: 100%;
-    margin: 20px 0;
-    display: block;
-}
-.ad-container-native > div {
-    width: 100%;
-    display: block;
-}
 header {
     height: 60px;
     background-color: #fff;
@@ -809,942 +781,344 @@ footer .container a:hover {
     color: #999;
 }
 
-/* Mobile Hamburger Menu Button */
-.mobile-menu-toggle {
-    display: none;
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 1001;
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    padding: 8px;
-    pointer-events: auto;
-    touch-action: manipulation;
+/* Mobile Responsive Navigation Styles */
+
+/* Hide elements by default on mobile */
+@media (max-width: 768px) {
+  .aside .search_box {
+    display: none !important;
+  }
+  
+  .aside .footer {
+    display: none !important;
+  }
+  
+  .aside .context {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background-color: #fff !important;
+    z-index: 9999 !important;
+    overflow-y: auto !important;
+    padding: 60px 20px 20px 20px !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .aside .context.active {
+    display: block !important;
+  }
+  
+  /* Show all child elements when context is active */
+  .aside .context.active .nav,
+  .aside .context.active .small_box,
+  .aside .context.active .mobile-footer-box {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Mobile footer box inside menu */
+  .mobile-footer-box {
+    display: none !important;
+    margin: 30px 0 20px 0 !important;
+  }
+  
+  .aside .context.active .mobile-footer-box {
+    display: block !important;
+  }
+  
+  .mobile-footer-box hr {
+    display: block !important;
+    border: none !important;
+    border-top: 1px solid #e0e0e0 !important;
+    margin: 20px 0 !important;
+  }
+  
+  .mobile-footer-box ul {
+    display: block !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .mobile-footer-box ul li {
+    display: block !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .mobile-footer-box ul li a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 15px !important;
+    font-size: 15px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    background-color: #f8f8f8 !important;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  .mobile-footer-box ul li a:hover,
+  .mobile-footer-box ul li a:active {
+    background-color: #e8e8e8 !important;
+  }
+  
+  .mobile-footer-box ul li a span {
+    display: inline !important;
+    font-weight: 500 !important;
+  }
+  
+  /* Three dots menu button */
+  .mobile-menu-toggle {
+    display: block !important;
+    background: none !important;
+    border: none !important;
+    font-size: 28px !important;
+    cursor: pointer !important;
+    padding: 10px !important;
+    color: #333 !important;
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 100 !important;
+    line-height: 1 !important;
+    width: 50px !important;
+    height: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: opacity 0.3s ease !important;
+  }
+  
+  .mobile-menu-toggle.hide {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+  
+  .mobile-menu-toggle:focus {
+    outline: none !important;
+  }
+  
+  /* Close button for mobile menu */
+  .mobile-menu-close {
+    display: none !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: #fff !important;
+    border: none !important;
+    font-size: 40px !important;
+    cursor: pointer !important;
+    color: #333 !important;
+    z-index: 10001 !important;
+    padding: 5px !important;
+    line-height: 1 !important;
+    width: 50px !important;
+    height: 50px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .mobile-menu-close.show {
+    display: flex !important;
+  }
+  
+  .mobile-menu-close:focus {
+    outline: none !important;
+  }
+  
+  .mobile-menu-close:active {
+    background-color: #f0f0f0 !important;
+  }
+  
+  /* Adjust header for mobile */
+  .aside .header {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 15px !important;
+  }
+  
+  .aside .logo {
+    flex: 0 0 auto !important;
+  }
+  
+  .aside .logo img {
+    max-height: 40px !important;
+    width: auto !important;
+  }
+  
+  /* Mobile menu navigation styling */
+  .aside .context .nav {
+    display: block !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .aside .context .nav ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+  
+  .aside .context .nav ul li {
+    margin-bottom: 10px !important;
+    display: block !important;
+  }
+  
+  .aside .context .nav ul li a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 15px !important;
+    font-size: 16px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    background-color: #f8f8f8 !important;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  .aside .context .nav ul li a:hover,
+  .aside .context .nav ul li a:active {
+    background-color: #e8e8e8 !important;
+  }
+  
+  .aside .context .nav ul li a i {
+    margin-right: 12px !important;
+    font-size: 20px !important;
+  }
+  
+  .aside .context .nav ul li a span {
+    font-weight: 500 !important;
+  }
+  
+  /* Small box styling in mobile */
+  .aside .context .small_box {
+    display: block !important;
+    margin: 30px 0 !important;
+  }
+  
+  .aside .context .small_box hr {
+    display: block !important;
+    border: none !important;
+    border-top: 1px solid #e0e0e0 !important;
+    margin: 20px 0 !important;
+  }
+  
+  .aside .context .small_box h3 {
+    display: block !important;
+    font-size: 18px !important;
+    margin-bottom: 15px !important;
+    color: #333 !important;
+    font-weight: 600 !important;
+  }
+  
+  .aside .context .small_box ul {
+    display: block !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .aside .context .small_box ul li {
+    display: block !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .aside .context .small_box ul li a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 15px !important;
+    font-size: 15px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    background-color: #f8f8f8 !important;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  .aside .context .small_box ul li a:hover,
+  .aside .context .small_box ul li a:active {
+    background-color: #e8e8e8 !important;
+  }
+  
+  .aside .context .small_box ul li a i {
+    margin-right: 10px !important;
+    font-size: 16px !important;
+  }
+  
+  .aside .context .small_box ul li a span {
+    display: inline !important;
+  }
+  
+  /* Overlay for mobile menu */
+  .mobile-menu-overlay {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    z-index: 9998 !important;
+  }
+  
+  .mobile-menu-overlay.active {
+    display: block !important;
+  }
 }
 
-.mobile-menu-toggle span {
-    display: block;
-    width: 24px;
-    height: 3px;
-    background-color: #333;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+/* Desktop view - hide mobile elements */
+@media (min-width: 769px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+  
+  .mobile-menu-close {
+    display: none !important;
+  }
+  
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+  
+  .mobile-footer-box {
+    display: none !important;
+  }
 }
 
-.mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
+/* Three dots icon styles */
+.mobile-menu-toggle::before {
+  content: "⋮" !important;
+  font-size: 32px !important;
+  line-height: 1 !important;
+  font-weight: bold !important;
 }
 
-.mobile-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
+/* Close icon styles */
+.mobile-menu-close::before {
+  content: "×" !important;
+  font-size: 36px !important;
+  line-height: 1 !important;
+  font-weight: 300 !important;
 }
 
-.mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+/* Smooth transitions */
+.aside .context {
+  transition: opacity 0.3s ease-in-out !important;
 }
 
-/* Mobile Menu Overlay */
-.mobile-menu-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.mobile-menu-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-/* Mobile Responsive Styles */
-@media screen and (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: flex;
-    }
-    
-    .container {
-        width: 100%;
-        padding: 0 10px;
-    }
-    
-    .main {
-        flex-direction: column;
-    }
-    
-    .aside {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 280px;
-        height: 100vh;
-        margin-bottom: 0;
-        border-radius: 0;
-        z-index: 1000;
-        transition: left 0.3s ease;
-        overflow-y: auto;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .aside.active {
-        left: 0;
-    }
-    
-    .aside .header {
-        padding: 60px 15px 15px;
-    }
-    
-    .aside .header .logo {
-        margin: 10px 0 15px;
-        height: 28px;
-    }
-    
-    .aside .header .search_box {
-        width: 100%;
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-    
-    .section {
-        margin-left: 0;
-        width: 100%;
-        order: -1;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .section .box_one a,
-    .section .box_two a {
-        position: relative;
-        z-index: 2;
-        pointer-events: auto;
-    }
-    
-    .mobile-menu-overlay {
-        display: block;
-    }
-    
-    body.menu-open {
-        overflow: hidden;
-    }
-    
-    .section .s_box {
-        margin-bottom: 20px;
-    }
-    
-    .section .title {
-        padding-left: 15px;
-        height: 50px;
-        line-height: 50px;
-        margin-bottom: 10px;
-    }
-    
-    .box_one {
-        justify-content: space-between;
-        padding: 0 10px;
-    }
-    
-    .box_one a {
-        width: calc(50% - 10px);
-        max-width: 144px;
-        height: auto;
-        margin: 10px 5px 0;
-    }
-    
-    .box_one a:nth-child(6n) {
-        margin-right: 5px;
-    }
-    
-    .box_one a:nth-child(2n) {
-        margin-right: 0;
-    }
-    
-    .box_one a .img {
-        width: 100%;
-        height: auto;
-        padding-bottom: 100%;
-        position: relative;
-    }
-    
-    .box_one a .img img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .box_one a .content_info {
-        width: 100%;
-        height: auto;
-        padding: 8px 5px;
-        min-height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .box_one a .content_info p {
-        font-size: 12px;
-        line-height: 1.3;
-        white-space: normal;
-        text-overflow: clip;
-        overflow: visible;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-    }
-    
-    .box_two {
-        padding: 0 10px;
-        justify-content: space-between;
-    }
-    
-    .box_two a {
-        width: calc(50% - 5px);
-        max-width: 227px;
-        height: auto;
-        min-height: 90px;
-        margin: 10px 2.5px 0;
-        flex-direction: column;
-        padding: 8px;
-    }
-    
-    .box_two a:nth-child(4n) {
-        margin-right: 2.5px;
-    }
-    
-    .box_two a:nth-child(2n) {
-        margin-right: 0;
-    }
-    
-    .box_two a .img {
-        width: 100%;
-        height: auto;
-        padding-bottom: 100%;
-        position: relative;
-        margin-right: 0;
-        margin-bottom: 8px;
-    }
-    
-    .box_two a .img img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .box_two a .text {
-        width: 100%;
-    }
-    
-    .box_two a .text h3 {
-        font-size: 14px;
-        margin-bottom: 5px;
-        white-space: normal;
-        overflow: visible;
-        text-overflow: clip;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        line-height: 1.3;
-    }
-    
-    .box_two a .text p {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-    }
-    
-    .box_two a .text p span {
-        position: relative;
-        left: auto;
-        font-size: 11px;
-    }
-    
-    .nav ul li a,
-    .small_box ul li a {
-        height: auto;
-        min-height: 46px;
-        padding: 12px 15px;
-    }
-    
-    .context {
-        padding: 0 15px 15px;
-    }
-    
-    .footer {
-        width: 100%;
-        position: relative;
-    }
-    
-    .footer .small_box {
-        padding: 0 15px 15px;
-    }
-    
-    .game_box {
-        flex-direction: column;
-        padding: 15px;
-    }
-    
-    .game_box .game {
-        width: 100%;
-        margin-right: 0;
-    }
-    
-    .game_box .ad_box {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin-top: 15px;
-        width: 100%;
-    }
-    
-    .game_box .game .mm_t {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .game_box .game .mm_t .img {
-        width: 100%;
-        max-width: 111px;
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-    
-    .game_box .game .mm_t .ml_t {
-        width: 100%;
-        height: auto;
-    }
-    
-    .game_box .game .mm_t .ml_t h3 {
-        width: 100%;
-        font-size: 20px;
-        white-space: normal;
-        overflow: visible;
-        text-overflow: clip;
-        height: auto;
-        line-height: 1.3;
-    }
-    
-    .game_box .game .game_details .details_box {
-        padding: 20px 15px;
-    }
-    
-    .game_box .game .game_details .details_box ul li {
-        width: 100%;
-        flex-direction: column;
-        padding-left: 0;
-        height: auto;
-        margin-bottom: 15px;
-    }
-    
-    .game_box .game .game_details .details_box ul li h3 {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-    
-    .game_box .game .game_details .details_box ul li p {
-        width: 100%;
-        padding-left: 0;
-        white-space: normal;
-        height: auto;
-    }
-    
-    .gri {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 15px;
-    }
-    
-    .gri a {
-        width: 100%;
-        height: auto;
-    }
-    
-    .gri a .img {
-        width: 100%;
-        height: auto;
-        padding-bottom: 100%;
-        position: relative;
-    }
-    
-    .gri a .img img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .gri a .content_info {
-        width: 100%;
-        height: auto;
-        padding: 8px 5px;
-        min-height: 40px;
-    }
-    
-    .gri .ad {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-    
-    .promotion {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-    
-    .promotion a {
-        width: 100%;
-        height: auto;
-    }
-    
-    .promotion a .thum {
-        width: 100%;
-        padding-bottom: 100%;
-    }
-    
-    .promotion a:nth-child(10),
-    .promotion a:nth-child(11),
-    .promotion a:nth-child(12),
-    .promotion a:nth-child(17),
-    .promotion a:nth-child(20),
-    .promotion a:nth-child(29),
-    .promotion a:nth-child(27),
-    .promotion a:nth-child(28) {
-        width: 100%;
-        height: auto;
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-    
-    .promotion a:nth-child(10) .thum,
-    .promotion a:nth-child(11) .thum,
-    .promotion a:nth-child(12) .thum,
-    .promotion a:nth-child(17) .thum,
-    .promotion a:nth-child(20) .thum,
-    .promotion a:nth-child(29) .thum,
-    .promotion a:nth-child(27) .thum,
-    .promotion a:nth-child(28) .thum {
-        width: 100%;
-        padding-bottom: 100%;
-    }
-    
-    .promotion a:nth-child(10) p,
-    .promotion a:nth-child(11) p,
-    .promotion a:nth-child(12) p,
-    .promotion a:nth-child(17) p,
-    .promotion a:nth-child(20) p,
-    .promotion a:nth-child(29) p,
-    .promotion a:nth-child(27) p,
-    .promotion a:nth-child(28) p {
-        width: 100%;
-        line-height: 33px;
-        font-size: 14px;
-    }
-    
-    .seeding_box {
-        padding: 15px;
-    }
-    
-    .seeding_box .seeding {
-        width: 100%;
-        height: auto;
-    }
-    
-    .seeding_box .seeding img {
-        height: auto;
-        width: 100%;
-    }
-    
-    .seeding .swiper-wrapper .swiper-slide {
-        width: auto;
-        height: auto;
-    }
-    
-    .get_app_box {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-    }
-    
-    .get_app_box a {
-        width: 100%;
-        max-width: 250px;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    
-    .get_app_box a:nth-last-child(1) {
-        margin-bottom: 0;
-    }
-    
-    .ad-container {
-        margin: 20px 0;
-        padding: 15px;
-        min-height: 90px;
-    }
-    
-    .ad-container-native {
-        margin: 15px 0;
-    }
-    
-    header .container {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-    
-    header .container .logo_img {
-        position: relative;
-        margin-bottom: 10px;
-    }
-    
-    header .container nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    header .container nav a {
-        margin-right: 15px;
-        font-size: 14px;
-    }
-    
-    footer .container {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-    }
-    
-    footer .container a {
-        border-right: none;
-        border-bottom: 2px solid #ccc;
-        padding: 10px 0;
-        width: 100%;
-        justify-content: center;
-    }
-    
-    footer .container a:nth-last-child(1) {
-        border-bottom: none;
-    }
-    
-    .sousuo_box {
-        padding: 15px;
-    }
-    
-    .sousuo_box a {
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-    
-    /* Hide 1st ads in original position on mobile - will be moved by JavaScript */
-    /* Using direct ID selector instead of :has() for better browser support */
-    .section .ad_box #div-gpt-ad-1766468198292-0,
-    .section .game_box .ad_box #div-gpt-ad-1766468198292-0 {
-        display: none;
-    }
-    
-    /* Show the ad box when it's moved to mobile wrapper */
-    .section .mobile-ad-wrapper #div-gpt-ad-1766468198292-0 {
-        display: block !important;
-    }
-    
-    /* Mobile Ad Wrapper and Label - Show after navigation */
-    .section .navigation + .mobile-ad-wrapper {
-        display: block !important;
-        margin: 15px 0;
-        padding: 0 10px;
-        width: 100%;
-    }
-    
-    .mobile-ad-wrapper {
-        display: block !important;
-        margin: 15px 0;
-        padding: 0 10px;
-        width: 100%;
-    }
-    
-    .mobile-ad-label {
-        display: block !important;
-        text-align: center;
-        font-size: 12px;
-        font-weight: 700;
-        color: #777;
-        margin-bottom: 8px;
-        padding: 5px 0;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    
-    /* Show 1st ads after navigation on mobile */
-    .section .mobile-first-ad {
-        display: block !important;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .section .mobile-ad-wrapper .mobile-first-ad {
-        display: block !important;
-    }
-    
-    .section .mobile-ad-wrapper .mobile-first-ad .ad {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .section .mobile-ad-wrapper .mobile-first-ad .ad > div {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-    }
-    
-    .section .mobile-ad-wrapper .mobile-first-ad .ad div[style*="width: 336px"],
-    .section .mobile-ad-wrapper .mobile-first-ad .ad div[style*="width: 800px"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-    }
-    
-    .section .mobile-ad-wrapper #div-gpt-ad-1766468198292-0 {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        min-height: 250px !important;
-        display: block !important;
-    }
-    
-    /* 2nd ads mobile view styling - EXACTLY same as 1st ads style */
-    .section .s_box .ad {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 0 !important;
-        box-sizing: border-box !important;
-        margin: 0 !important;
-        overflow: visible !important;
-    }
-    
-    /* 2nd ads container - EXACTLY same as 1st ads */
-    .section .s_box .ad > div[style*="width: 970px"],
-    .section .s_box .ad > div[style*="width:970px"],
-    .section .s_box .ad > div[style*="width: 970px;"],
-    .section .s_box .ad > div[style*="width:970px;"],
-    .section .s_box .ad > div[style*="width: 970px;height"],
-    .section .s_box .ad > div[style*="width:970px;height"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        height: auto !important;
-        min-height: 250px !important;
-        max-height: none !important;
-        display: block !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        box-sizing: border-box !important;
-        overflow: visible !important;
-    }
-    
-    /* 2nd ads element itself - EXACTLY same as 1st ads */
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        height: auto !important;
-        min-height: 250px !important;
-        max-height: none !important;
-        display: block !important;
-        box-sizing: border-box !important;
-        overflow: visible !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        position: relative !important;
-    }
-    
-    /* Hide script tags inside 2nd ads - they should not be visible */
-    .section .s_box .ad script,
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 script,
-    .section .s_box .ad div[style*="width: 970px"] script,
-    .section .s_box .ad div[style*="width:970px"] script {
-        display: none !important;
-        visibility: hidden !important;
-        height: 0 !important;
-        width: 0 !important;
-        opacity: 0 !important;
-        position: absolute !important;
-        left: -9999px !important;
-    }
-    
-    /* Ensure ad container properly displays the ad content */
-    .section .s_box .ad #div-gpt-ad-1766468250120-0:empty {
-        min-height: 250px !important;
-    }
-    
-    /* Make sure iframe or amp-img is visible when ad loads */
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 iframe,
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 amp-img,
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 > div:not(script) {
-        display: block !important;
-        visibility: visible !important;
-    }
-
-    /* Make the inner iframe of 2nd ad responsive - EXACTLY same as 1st */
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 iframe,
-    .section .s_box .ad div[style*="width: 970px"] iframe,
-    .section .s_box .ad div[style*="width:970px"] iframe {
-        width: 100% !important;
-        height: auto !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        min-height: 250px !important;
-        display: block !important;
-        box-sizing: border-box !important;
-        overflow: visible !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    
-    /* All inner divs and amp-img of 2nd ads - EXACTLY same as 1st */
-    .section .s_box .ad div[style*="width: 970px"] > div,
-    .section .s_box .ad div[style*="width:970px"] > div,
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 > div,
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 > *,
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 amp-img,
-    .section .s_box .ad div[style*="width: 970px"] amp-img,
-    .section .s_box .ad div[style*="width:970px"] amp-img {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        height: auto !important;
-        min-height: 250px !important;
-        box-sizing: border-box !important;
-        overflow: visible !important;
-        display: block !important;
-    }
-    
-    /* amp-img inner img - make it responsive */
-    .section .s_box .ad amp-img img,
-    .section .s_box .ad #div-gpt-ad-1766468250120-0 amp-img img,
-    .section .s_box .ad div[style*="width: 970px"] amp-img img {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        display: block !important;
-        box-sizing: border-box !important;
-    }
-    
-    .section .s_box .ad p {
-        margin-top: 8px !important;
-        font-size: 12px !important;
-        color: #777 !important;
-        text-align: center !important;
-        width: 100% !important;
-    }
-    
-    /* Ensure s_box containing 2nd ads has same styling as mobile-ad-wrapper */
-    .section .s_box:has(#div-gpt-ad-1766468250120-0) {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 10px !important;
-        box-sizing: border-box !important;
-        margin: 15px 0 !important;
-        overflow: visible !important;
-        height: auto !important;
-        min-height: auto !important;
-        max-height: none !important;
-    }
-    
-    /* Alternative selector for browsers that don't support :has() */
-    .section .s_box #div-gpt-ad-1766468250120-0 {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* Ensure parent containers don't cut the ads */
-    .section .s_box:has(#div-gpt-ad-1766468250120-0) .ad,
-    .section .s_box .ad:has(#div-gpt-ad-1766468250120-0) {
-        overflow: visible !important;
-        height: auto !important;
-        min-height: auto !important;
-        max-height: none !important;
-    }
-    
-    /* Remove any height restrictions from parent divs */
-    .section .s_box .ad > div[style*="height: 90px"],
-    .section .s_box .ad > div[style*="height:90px"] {
-        height: auto !important;
-        min-height: 250px !important;
-        max-height: none !important;
-    }
-    
-    
-    /* 3rd ads mobile view styling - make it responsive */
-    .section .s_box .ad #div-gpt-ad-1766468285021-0 {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        height: auto !important;
-        min-height: 250px !important;
-        display: block !important;
-    }
-    
-    .section .s_box .ad > div[style*="width: 800px"],
-    .section .s_box .ad > div[style*="width:800px"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        height: auto !important;
-        min-height: 250px !important;
-        display: block !important;
-    }
-    
-    /* All ads in s_box should be responsive on mobile */
-    .section .s_box {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-    
-    .section .s_box .ad {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    
-    /* Make all ad containers responsive */
-    .section .s_box .ad > div {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box;
-    }
-    
-    /* 1st ads in ad_box - mobile responsive (when not moved) */
-    .section .game_box .ad_box {
-        width: 100%;
-        max-width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    
-    .section .game_box .ad_box .ad {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .section .game_box .ad_box .ad #div-gpt-ad-1766468198292-0 {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        height: auto !important;
-        min-height: 250px !important;
-        display: block !important;
-    }
-    
-    /* Ad container responsive */
-    .ad-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 15px !important;
-        box-sizing: border-box;
-    }
-    
-    .ad-container > div {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* Native ad container responsive */
-    .ad-container-native {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .ad-container-native > div {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
-
-/* Small Mobile Devices */
-@media screen and (max-width: 480px) {
-    .container {
-        padding: 0 8px;
-    }
-    
-    .box_one a {
-        width: calc(50% - 6px);
-        margin: 8px 3px 0;
-    }
-    
-    .box_one a:nth-child(2n) {
-        margin-right: 0;
-    }
-    
-    .box_two a {
-        width: 100%;
-        max-width: 100%;
-        margin: 10px 0 0;
-    }
-    
-    .box_two a:nth-child(2n) {
-        margin-right: 0;
-    }
-    
-    .section .title {
-        font-size: 14px;
-        padding-left: 10px;
-    }
-    
-    .aside .header .logo {
-        height: 24px;
-    }
-    
-    .nav ul li a span,
-    .small_box ul li a span {
-        font-size: 13px;
-    }
-    
-    .small_box h3 {
-        font-size: 14px;
-    }
+/* Body scroll lock when menu is open */
+body.menu-open {
+  overflow: hidden !important;
 }
 
 

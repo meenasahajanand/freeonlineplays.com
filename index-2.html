@@ -2,619 +2,782 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 
 <!-- Mirrored from freeonlineplays.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Dec 2025 09:03:03 GMT -->
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Action, Adventure, Casual, Simulation, Strategy, Role-playing, Single-player, Free, 2D">
-    <meta name="description" content="Civilitythegame with a simple and intuitive interface, you can easily browse and download the latest popular games. We focus not only on the quality of our games but also on the user experience, providing a strong community to allow you to communicate and share your experiences with other players. Join us and start your gaming journey for endless hours of fun!">
-    <title>Open the door to unlimited fun! A global bash to make your gaming heroes legendary! Join us and unleash your gaming potential!</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/iconfont.css">
-    <link rel="shortcut icon" href="img/favicon.png">
- <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords"
+    content="Action, Adventure, Casual, Simulation, Strategy, Role-playing, Single-player, Free, 2D">
+  <meta name="description"
+    content="Civilitythegame with a simple and intuitive interface, you can easily browse and download the latest popular games. We focus not only on the quality of our games but also on the user experience, providing a strong community to allow you to communicate and share your experiences with other players. Join us and start your gaming journey for endless hours of fun!">
+  <title>Open the door to unlimited fun! A global bash to make your gaming heroes legendary! Join us and unleash your
+    gaming potential!</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/iconfont.css">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WGTMDLSG8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-8WGTMDLSG8');
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17827820993"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17827820993');
+  </script>
+
 <script>
-  window.googletag = window.googletag || { cmd: [] };
-  let interstitialSlot;
+    document.addEventListener('DOMContentLoaded', function () {
 
-  googletag.cmd.push(() => {
-    // ✅ Define interstitial slot
-    interstitialSlot = googletag.defineOutOfPageSlot(
-      '/23330730517/freeonlineplays.com_inter',
-      googletag.enums.OutOfPageFormat.INTERSTITIAL
-    );
+        const adIds = [
+            'div-gpt-ad-1766468198292-0', // D1
+            'div-gpt-ad-1766468250120-0', // D2
+            'div-gpt-ad-1766468285021-0'  // D3
+        ];
 
-    if (interstitialSlot) {
-      interstitialSlot.addService(googletag.pubads());
-    }
+        let isOverAd = false;
 
-    googletag.enableServices();
+        adIds.forEach(function (id) {
+            const adEl = document.getElementById(id);
+            if (!adEl) return;
 
-    // ✅ Preload the interstitial ad immediately after page load
-    if (interstitialSlot) {
-      googletag.display(interstitialSlot);
-    }
-  });
+            adEl.addEventListener('mouseenter', function () {
+                isOverAd = true;
+            });
 
-  // ✅ Function to show interstitial and then call callback
-  function showInterstitialAd(callback) {
-    googletag.cmd.push(() => {
-      if (interstitialSlot) {
-        googletag.pubads().display(interstitialSlot);
-      }
-      // ⏳ Fast fallback: max wait 500ms
-      setTimeout(() => {
-        if (typeof callback === 'function') callback();
-      }, 500);
+            adEl.addEventListener('mouseleave', function () {
+                isOverAd = false;
+            });
+        });
+
+        window.addEventListener('blur', function () {
+            if (isOverAd) {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    event: 'detail_ck'
+                });
+            }
+        });
+
     });
-  }
 </script>
 
 
-    <style>
-      #link {
-        display: none;
-      }
-
-      div.content {
-        position: fixed;
-        top: 50%;
-      }
-    </style>
-
-
-
-
-
-
-    <!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-P66454XE6E"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'G-P66454XE6E');
-</script> 
-
-<!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830652928"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'AW-17830652928');
-</script> 
-
-
-    
-
-     <script type="text/javascript"> 
-    function reward(event, url, type) {
-        document.querySelector(".body-loading").style.display = "flex";
-          setTimeout(function(){
-            showTip(url, type);
-          } , 5000);
-    }
-    function showTip(url, type) { 
-fbq('track', 'Lead');
-        document.querySelector(".body-loading .loader").style.display = "none";
-        document.querySelector(".tooltip").style.display = "block";
-        let text = type === "apple" ? "App Store" : "Google Play";
-        document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
-        document.querySelector(".tooltip-button-continue").href = url;
-        document
-            .querySelector(".tooltip-button-cancel")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-                window.location.reload();
-            });
-        document
-            .querySelector(".tooltip-button-continue")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-            });
-
-
-        try{
-          gtag('event', 'conversion', {'send_to':  'AW-17830652928/UHN4CKeii9cbEIDYqLZC'});
-        }catch(e){
-          console.log(e);
-        }
-    }
-
-    </script>
-
 
 </head>
+
 <body>
-   <!-- Google tag (gtag.js) 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830652928"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'AW-17830652928');
-</script> -->
+ 
 
 
 
-    
 
-    <div class="main container">
-        <div class="aside">
-            <div class="header">
-                <div class="logo">
-<a href="index-2.html" >
-<img src="img/logo.png">
-</a>
-</div>
-<div class="search_box" > 
-<form action="https://freeonlineplays.com/search.html?q=">
-<input class="search_input" id="searchB" name="q" type="text" autocomplete="false" placeholder="Search games...">
-<button type="submit"><i class="iconfont icon-sousuo"></i></button>
-</form>
-</div>
-
-            </div>
-            <div class="context">
-                <div class="nav">
-                    <ul>
-                        <li>
-<a href="games.html">
-<i class="iconfont icon-huangguan"></i>
-<span>Recommended</span>
-</a>
-</li>
-
-
-<li>
-<a href="hotgame.html">
-<i class="iconfont icon-remen" ></i>
-<span>Trending</span>
-</a>
-</li>
-
-
-<li>
-<a href="newdategame.html">
-<i class="iconfont icon-appgengxinguanli" ></i>
-<span>Latest</span>
-</a>
-</li>
-
-                    </ul>
-                </div>
-
-
-                <div class="small_box">
-                    <hr>
-                    <h3>Category</h3>
-                    <ul>
-                        <li>
-<a href="class/Racing.html">
-<i class="iconfont icon-shizijiahao5"></i>
-<span>Racing</span>
-</a>
-</li>
-<li>
-<a href="class/Puzzle.html">
-<i class="iconfont icon-shizijiahao5"></i>
-<span>Puzzle</span>
-</a>
-</li>
-<li>
-<a href="class/RPG.html">
-<i class="iconfont icon-shizijiahao5"></i>
-<span>RPG</span>
-</a>
-</li>
-<li>
-<a href="class/Casual.html">
-<i class="iconfont icon-shizijiahao5"></i>
-<span>Casual</span>
-</a>
-</li>
-<li>
-<a href="class/Simulation.html">
-<i class="iconfont icon-shizijiahao5"></i>
-<span>Simulation</span>
-</a>
-</li>
-<li>
-<a href="class/Adventure.html">
-<i class="iconfont icon-shizijiahao5"></i>
-<span>Adventure</span>
-</a>
-</li>
-
-                    </ul>
-                </div>
-            </div>
-            <div class="footer">
-                <div class="small_box">
-                    <hr>
-                    <ul>
-                        <li>
-<a href="company.html"><span>COMPANY</span></a>
-</li>
-<li>
-<a href="privacy.html"><span>PRIVACY</span></a>
-</li>
-<li>
-<a href="terms.html"><span>TERMS OF USE</span></a>
-</li>
-
-                    </ul>
-                </div>
-            </div>
+  <div class="main container">
+    <div class="aside">
+      <div class="header">
+        <div class="logo">
+          <a href="index-2.html">
+            <img src="img/logo.png">
+          </a>
         </div>
-        <div class="section">
-            <div class="s_box">
-                <h3 class="title">Recommended</h3>
-                <div class="box_one">
-
-                    <a href="game/Five_Nights_at_Freddy_s_2.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_2_8e6567.jpg" alt="Five Nights at Freddy&apos;s 2">
-</div>
-<div class="content_info">
-<p>Five Nights at Freddy&apos;s 2</p>
-</div>
-</a>
-<a href="game/Minecraft.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Minecraft_94858e.jpg" alt="Minecraft">
-</div>
-<div class="content_info">
-<p>Minecraft</p>
-</div>
-</a>
-<a href="game/Genshin_Impact.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Genshin_Impact_fdce10.jpg" alt="Genshin Impact">
-</div>
-<div class="content_info">
-<p>Genshin Impact</p>
-</div>
-</a>
-<a href="game/Getting_Over_It.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Getting_Over_It_7c4650.jpg" alt="Getting Over It">
-</div>
-<div class="content_info">
-<p>Getting Over It</p>
-</div>
-</a>
-<a href="game/Among_Us.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Among_Us_f96bec.jpg" alt="Among Us">
-</div>
-<div class="content_info">
-<p>Among Us</p>
-</div>
-</a>
-<a href="game/Subway_Surfers.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Subway_Surfers_d452af.jpg" alt="Subway Surfers">
-</div>
-<div class="content_info">
-<p>Subway Surfers</p>
-</div>
-</a>
-<a href="game/Clash_of_Clans.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Clash_of_Clans_db6076.jpg" alt="Clash of Clans">
-</div>
-<div class="content_info">
-<p>Clash of Clans</p>
-</div>
-</a>
-<a href="game/Geometry_Dash.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Geometry_Dash_b0bb9e.jpg" alt="Geometry Dash">
-</div>
-<div class="content_info">
-<p>Geometry Dash</p>
-</div>
-</a>
-<a href="game/Magic_Tiles_3.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Magic_Tiles_3_d45500.jpg" alt="Magic Tiles 3">
-</div>
-<div class="content_info">
-<p>Magic Tiles 3</p>
-</div>
-</a>
-<a href="game/Peppa_Pig__Holiday_Adventures.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Entertainment_One_888640.png" alt="Peppa Pig: Holiday Adventures">
-</div>
-<div class="content_info">
-<p>Peppa Pig: Holiday Adventures</p>
-</div>
-</a>
-<a href="game/Five_Nights_at_Freddy_s.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_f94993.jpg" alt="Five Nights at Freddy&apos;s">
-</div>
-<div class="content_info">
-<p>Five Nights at Freddy&apos;s</p>
-</div>
-</a>
-<a href="game/Snake_io.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Snake.io_aa57e9.jpg" alt="Snake.io">
-</div>
-<div class="content_info">
-<p>Snake.io</p>
-</div>
-</a>
-
-
-                </div>
-            </div>
-            <div class="s_box">
-                <h3 class="title">Trending</h3>
-                <div class="box_two">
-                    <a  href="game/Jigsaw_Puzzles_HD_Puzzle_Games.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Jigsaw_Puzzles_HD_Puzzle_Games_2e75d6.jpg" alt="Jigsaw Puzzles HD Puzzle Games">
-</div>
-<div class="text">
-<h3>Jigsaw Puzzles HD Puzzle Games</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1100</span>
-</p>
-</div>
-</a>
-<a  href="game/Legend_of_Slime__Idle_RPG_War.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Legend_of_Slime__Idle_RPG_War_5954f1.jpg" alt="Legend of Slime: Idle RPG War">
-</div>
-<div class="text">
-<h3>Legend of Slime: Idle RPG War</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1190</span>
-</p>
-</div>
-</a>
-<a  href="game/Monument_Valley.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Monument_Valley_380a58.jpg" alt="Monument Valley">
-</div>
-<div class="text">
-<h3>Monument Valley</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1219</span>
-</p>
-</div>
-</a>
-<a  href="game/Candy_Crush_Saga.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Candy_Crush_Saga_9f5306.jpg" alt="Candy Crush Saga">
-</div>
-<div class="text">
-<h3>Candy Crush Saga</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1213</span>
-</p>
-</div>
-</a>
-<a  href="game/Candy_Crush_Soda_Saga.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Candy_Crush_Soda_Saga_c4f5a8.jpg" alt="Candy Crush Soda Saga">
-</div>
-<div class="text">
-<h3>Candy Crush Soda Saga</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1170</span>
-</p>
-</div>
-</a>
-<a  href="game/Candy_Crush_Friends_Saga.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Candy_Crush_Friends_Saga_8dde49.jpg" alt="Candy Crush Friends Saga">
-</div>
-<div class="text">
-<h3>Candy Crush Friends Saga</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1098</span>
-</p>
-</div>
-</a>
-<a  href="game/Evony__The_King_s_Return.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Evony__The_King_s_Return_f87c63.jpg" alt="Evony: The King&apos;s Return">
-</div>
-<div class="text">
-<h3>Evony: The King&apos;s Return</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1520</span>
-</p>
-</div>
-</a>
-<a  href="game/Roblox.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Roblox_0929ef.jpg" alt="Roblox">
-</div>
-<div class="text">
-<h3>Roblox</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1111</span>
-</p>
-</div>
-</a>
-<a  href="game/Angry_Birds_2.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Angry_Birds_2_13b1e2.jpg" alt="Angry Birds 2">
-</div>
-<div class="text">
-<h3>Angry Birds 2</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1222</span>
-</p>
-</div>
-</a>
-<a  href="game/GODDESS_OF_VICTORY__NIKKE.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/GODDESS_OF_VICTORY__NIKKE_bb5064.jpg" alt="GODDESS OF VICTORY: NIKKE">
-</div>
-<div class="text">
-<h3>GODDESS OF VICTORY: NIKKE</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>2211</span>
-</p>
-</div>
-</a>
-<a  href="game/Angry_Birds_Friends.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Angry_Birds_Friends_d7ff71.jpg" alt="Angry Birds Friends">
-</div>
-<div class="text">
-<h3>Angry Birds Friends</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1212</span>
-</p>
-</div>
-</a>
-<a  href="game/Age_of_Origins.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Age_of_Origins_4583f8.jpg" alt="Age of Origins">
-</div>
-<div class="text">
-<h3>Age of Origins</h3>
-<p>
-<span><i class="iconfont icon-zan"></i>0.0</span>
-<span><i class="iconfont icon-play"></i>1235</span>
-</p>
-</div>
-</a>
-
-                </div>
-            </div>
-            <div class="s_box">
-                <h3 class="title">Latest</h3>
-                <div class="box_one">
-
-                    <a href="game/Subway_Surfers.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Subway_Surfers_d452af.jpg" alt="Subway Surfers">
-</div>
-<div class="content_info">
-<p>Subway Surfers</p>
-</div>
-</a>
-<a href="game/Jigsaw_Puzzles_HD_Puzzle_Games.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Jigsaw_Puzzles_HD_Puzzle_Games_2e75d6.jpg" alt="Jigsaw Puzzles HD Puzzle Games">
-</div>
-<div class="content_info">
-<p>Jigsaw Puzzles HD Puzzle Games</p>
-</div>
-</a>
-<a href="game/Legend_of_Slime__Idle_RPG_War.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Legend_of_Slime__Idle_RPG_War_5954f1.jpg" alt="Legend of Slime: Idle RPG War">
-</div>
-<div class="content_info">
-<p>Legend of Slime: Idle RPG War</p>
-</div>
-</a>
-<a href="game/Monument_Valley.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Monument_Valley_380a58.jpg" alt="Monument Valley">
-</div>
-<div class="content_info">
-<p>Monument Valley</p>
-</div>
-</a>
-<a href="game/Candy_Crush_Saga.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Candy_Crush_Saga_9f5306.jpg" alt="Candy Crush Saga">
-</div>
-<div class="content_info">
-<p>Candy Crush Saga</p>
-</div>
-</a>
-<a href="game/Candy_Crush_Soda_Saga.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Candy_Crush_Soda_Saga_c4f5a8.jpg" alt="Candy Crush Soda Saga">
-</div>
-<div class="content_info">
-<p>Candy Crush Soda Saga</p>
-</div>
-</a>
-<a href="game/Candy_Crush_Friends_Saga.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Candy_Crush_Friends_Saga_8dde49.jpg" alt="Candy Crush Friends Saga">
-</div>
-<div class="content_info">
-<p>Candy Crush Friends Saga</p>
-</div>
-</a>
-<a href="game/Evony__The_King_s_Return.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Evony__The_King_s_Return_f87c63.jpg" alt="Evony: The King&apos;s Return">
-</div>
-<div class="content_info">
-<p>Evony: The King&apos;s Return</p>
-</div>
-</a>
-<a href="game/Roblox.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Roblox_0929ef.jpg" alt="Roblox">
-</div>
-<div class="content_info">
-<p>Roblox</p>
-</div>
-</a>
-<a href="game/Angry_Birds_2.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Angry_Birds_2_13b1e2.jpg" alt="Angry Birds 2">
-</div>
-<div class="content_info">
-<p>Angry Birds 2</p>
-</div>
-</a>
-<a href="game/GODDESS_OF_VICTORY__NIKKE.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/GODDESS_OF_VICTORY__NIKKE_bb5064.jpg" alt="GODDESS OF VICTORY: NIKKE">
-</div>
-<div class="content_info">
-<p>GODDESS OF VICTORY: NIKKE</p>
-</div>
-</a>
-<a href="game/Angry_Birds_Friends.html">
-<div class="img">
-<img src="https://img.civilitythegame.com/Icon/Angry_Birds_Friends_d7ff71.jpg" alt="Angry Birds Friends">
-</div>
-<div class="content_info">
-<p>Angry Birds Friends</p>
-</div>
-</a>
-
-                </div>
-            </div>
+        <div class="search_box">
+          <form action="https://freeonlineplays.com/search.html?q=">
+            <input class="search_input" id="searchB" name="q" type="text" autocomplete="false"
+              placeholder="Search games...">
+            <button type="submit"><i class="iconfont icon-sousuo"></i></button>
+          </form>
         </div>
+
+      </div>
+      <div class="context">
+        <div class="nav">
+          <ul>
+            <li>
+              <a href="games.html">
+                <i class="iconfont icon-huangguan"></i>
+                <span>Recommended</span>
+              </a>
+            </li>
+            <li>
+              <a href="hotgame.html">
+                <i class="iconfont icon-remen"></i>
+                <span>Trending</span>
+              </a>
+            </li>
+            <li>
+              <a href="newdategame.html">
+                <i class="iconfont icon-appgengxinguanli"></i>
+                <span>Latest</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="small_box">
+          <hr>
+          <h3>Category</h3>
+          <ul>
+            <li>
+              <a href="class/Racing.html">
+                <i class="iconfont icon-shizijiahao5"></i>
+                <span>Racing</span>
+              </a>
+            </li>
+            <li>
+              <a href="class/Puzzle.html">
+                <i class="iconfont icon-shizijiahao5"></i>
+                <span>Puzzle</span>
+              </a>
+            </li>
+            <li>
+              <a href="class/RPG.html">
+                <i class="iconfont icon-shizijiahao5"></i>
+                <span>RPG</span>
+              </a>
+            </li>
+            <li>
+              <a href="class/Casual.html">
+                <i class="iconfont icon-shizijiahao5"></i>
+                <span>Casual</span>
+              </a>
+            </li>
+            <li>
+              <a href="class/Simulation.html">
+                <i class="iconfont icon-shizijiahao5"></i>
+                <span>Simulation</span>
+              </a>
+            </li>
+            <li>
+              <a href="class/Adventure.html">
+                <i class="iconfont icon-shizijiahao5"></i>
+                <span>Adventure</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="small_box">
+          <hr>
+          <ul>
+            <li>
+              <a href="company.html"><span>COMPANY</span></a>
+            </li>
+            <li>
+              <a href="privacy.html"><span>PRIVACY</span></a>
+            </li>
+            <li>
+              <a href="terms.html"><span>TERMS OF USE</span></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
     </div>
+    <div class="section">
+      <div class="s_box">
+        <h3 class="title">Recommended</h3>
+        <div class="box_one">
+
+          <a href="game/Five_Nights_at_Freddy_s_2.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_2_8e6567.jpg"
+                alt="Five Nights at Freddy&apos;s 2">
+            </div>
+            <div class="content_info">
+              <p>Five Nights at Freddy&apos;s 2</p>
+            </div>
+          </a>
+          <a href="game/Minecraft.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Minecraft_94858e.jpg" alt="Minecraft">
+            </div>
+            <div class="content_info">
+              <p>Minecraft</p>
+            </div>
+          </a>
+          <a href="game/Genshin_Impact.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Genshin_Impact_fdce10.jpg" alt="Genshin Impact">
+            </div>
+            <div class="content_info">
+              <p>Genshin Impact</p>
+            </div>
+          </a>
+          <a href="game/Getting_Over_It.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Getting_Over_It_7c4650.jpg" alt="Getting Over It">
+            </div>
+            <div class="content_info">
+              <p>Getting Over It</p>
+            </div>
+          </a>
+          <a href="game/Among_Us.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Among_Us_f96bec.jpg" alt="Among Us">
+            </div>
+            <div class="content_info">
+              <p>Among Us</p>
+            </div>
+          </a>
+          <a href="game/Subway_Surfers.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Subway_Surfers_d452af.jpg" alt="Subway Surfers">
+            </div>
+            <div class="content_info">
+              <p>Subway Surfers</p>
+            </div>
+          </a>
+          <a href="game/Clash_of_Clans.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Clash_of_Clans_db6076.jpg" alt="Clash of Clans">
+            </div>
+            <div class="content_info">
+              <p>Clash of Clans</p>
+            </div>
+          </a>
+          <a href="game/Geometry_Dash.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Geometry_Dash_b0bb9e.jpg" alt="Geometry Dash">
+            </div>
+            <div class="content_info">
+              <p>Geometry Dash</p>
+            </div>
+          </a>
+          <a href="game/Magic_Tiles_3.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Magic_Tiles_3_d45500.jpg" alt="Magic Tiles 3">
+            </div>
+            <div class="content_info">
+              <p>Magic Tiles 3</p>
+            </div>
+          </a>
+          <a href="game/Peppa_Pig__Holiday_Adventures.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Entertainment_One_888640.png"
+                alt="Peppa Pig: Holiday Adventures">
+            </div>
+            <div class="content_info">
+              <p>Peppa Pig: Holiday Adventures</p>
+            </div>
+          </a>
+          <a href="game/Five_Nights_at_Freddy_s.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_f94993.jpg"
+                alt="Five Nights at Freddy&apos;s">
+            </div>
+            <div class="content_info">
+              <p>Five Nights at Freddy&apos;s</p>
+            </div>
+          </a>
+          <a href="game/Snake_io.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Snake.io_aa57e9.jpg" alt="Snake.io">
+            </div>
+            <div class="content_info">
+              <p>Snake.io</p>
+            </div>
+          </a>
 
 
-    <script src="js/lazyload.js"></script>
-    <script>
-        lazyload()
-    </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2d0e241130bf4b05b6cb445ce454da0a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+        </div>
+      </div>
+      <div class="s_box">
+        <h3 class="title">Trending</h3>
+        <div class="box_two">
+          <a href="game/Jigsaw_Puzzles_HD_Puzzle_Games.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Jigsaw_Puzzles_HD_Puzzle_Games_2e75d6.jpg"
+                alt="Jigsaw Puzzles HD Puzzle Games">
+            </div>
+            <div class="text">
+              <h3>Jigsaw Puzzles HD Puzzle Games</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1100</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Legend_of_Slime__Idle_RPG_War.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Legend_of_Slime__Idle_RPG_War_5954f1.jpg"
+                alt="Legend of Slime: Idle RPG War">
+            </div>
+            <div class="text">
+              <h3>Legend of Slime: Idle RPG War</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1190</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Monument_Valley.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Monument_Valley_380a58.jpg" alt="Monument Valley">
+            </div>
+            <div class="text">
+              <h3>Monument Valley</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1219</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Candy_Crush_Saga.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Candy_Crush_Saga_9f5306.jpg" alt="Candy Crush Saga">
+            </div>
+            <div class="text">
+              <h3>Candy Crush Saga</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1213</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Candy_Crush_Soda_Saga.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Candy_Crush_Soda_Saga_c4f5a8.jpg"
+                alt="Candy Crush Soda Saga">
+            </div>
+            <div class="text">
+              <h3>Candy Crush Soda Saga</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1170</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Candy_Crush_Friends_Saga.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Candy_Crush_Friends_Saga_8dde49.jpg"
+                alt="Candy Crush Friends Saga">
+            </div>
+            <div class="text">
+              <h3>Candy Crush Friends Saga</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1098</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Evony__The_King_s_Return.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Evony__The_King_s_Return_f87c63.jpg"
+                alt="Evony: The King&apos;s Return">
+            </div>
+            <div class="text">
+              <h3>Evony: The King&apos;s Return</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1520</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Roblox.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Roblox_0929ef.jpg" alt="Roblox">
+            </div>
+            <div class="text">
+              <h3>Roblox</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1111</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Angry_Birds_2.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Angry_Birds_2_13b1e2.jpg" alt="Angry Birds 2">
+            </div>
+            <div class="text">
+              <h3>Angry Birds 2</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1222</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/GODDESS_OF_VICTORY__NIKKE.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/GODDESS_OF_VICTORY__NIKKE_bb5064.jpg"
+                alt="GODDESS OF VICTORY: NIKKE">
+            </div>
+            <div class="text">
+              <h3>GODDESS OF VICTORY: NIKKE</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>2211</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Angry_Birds_Friends.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Angry_Birds_Friends_d7ff71.jpg"
+                alt="Angry Birds Friends">
+            </div>
+            <div class="text">
+              <h3>Angry Birds Friends</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1212</span>
+              </p>
+            </div>
+          </a>
+          <a href="game/Age_of_Origins.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Age_of_Origins_4583f8.jpg" alt="Age of Origins">
+            </div>
+            <div class="text">
+              <h3>Age of Origins</h3>
+              <p>
+                <span><i class="iconfont icon-zan"></i>0.0</span>
+                <span><i class="iconfont icon-play"></i>1235</span>
+              </p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="s_box">
+        <h3 class="title">Latest</h3>
+        <div class="box_one">
+
+          <a href="game/Subway_Surfers.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Subway_Surfers_d452af.jpg" alt="Subway Surfers">
+            </div>
+            <div class="content_info">
+              <p>Subway Surfers</p>
+            </div>
+          </a>
+          <a href="game/Jigsaw_Puzzles_HD_Puzzle_Games.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Jigsaw_Puzzles_HD_Puzzle_Games_2e75d6.jpg"
+                alt="Jigsaw Puzzles HD Puzzle Games">
+            </div>
+            <div class="content_info">
+              <p>Jigsaw Puzzles HD Puzzle Games</p>
+            </div>
+          </a>
+          <a href="game/Legend_of_Slime__Idle_RPG_War.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Legend_of_Slime__Idle_RPG_War_5954f1.jpg"
+                alt="Legend of Slime: Idle RPG War">
+            </div>
+            <div class="content_info">
+              <p>Legend of Slime: Idle RPG War</p>
+            </div>
+          </a>
+          <a href="game/Monument_Valley.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Monument_Valley_380a58.jpg" alt="Monument Valley">
+            </div>
+            <div class="content_info">
+              <p>Monument Valley</p>
+            </div>
+          </a>
+          <a href="game/Candy_Crush_Saga.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Candy_Crush_Saga_9f5306.jpg" alt="Candy Crush Saga">
+            </div>
+            <div class="content_info">
+              <p>Candy Crush Saga</p>
+            </div>
+          </a>
+          <a href="game/Candy_Crush_Soda_Saga.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Candy_Crush_Soda_Saga_c4f5a8.jpg"
+                alt="Candy Crush Soda Saga">
+            </div>
+            <div class="content_info">
+              <p>Candy Crush Soda Saga</p>
+            </div>
+          </a>
+          <a href="game/Candy_Crush_Friends_Saga.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Candy_Crush_Friends_Saga_8dde49.jpg"
+                alt="Candy Crush Friends Saga">
+            </div>
+            <div class="content_info">
+              <p>Candy Crush Friends Saga</p>
+            </div>
+          </a>
+          <a href="game/Evony__The_King_s_Return.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Evony__The_King_s_Return_f87c63.jpg"
+                alt="Evony: The King&apos;s Return">
+            </div>
+            <div class="content_info">
+              <p>Evony: The King&apos;s Return</p>
+            </div>
+          </a>
+          <a href="game/Roblox.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Roblox_0929ef.jpg" alt="Roblox">
+            </div>
+            <div class="content_info">
+              <p>Roblox</p>
+            </div>
+          </a>
+          <a href="game/Angry_Birds_2.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Angry_Birds_2_13b1e2.jpg" alt="Angry Birds 2">
+            </div>
+            <div class="content_info">
+              <p>Angry Birds 2</p>
+            </div>
+          </a>
+          <a href="game/GODDESS_OF_VICTORY__NIKKE.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/GODDESS_OF_VICTORY__NIKKE_bb5064.jpg"
+                alt="GODDESS OF VICTORY: NIKKE">
+            </div>
+            <div class="content_info">
+              <p>GODDESS OF VICTORY: NIKKE</p>
+            </div>
+          </a>
+          <a href="game/Angry_Birds_Friends.html">
+            <div class="img">
+              <img class="lazyload" src="../img.civilitythegame.com/img/lazyload.png"
+                data-src="https://img.civilitythegame.com/Icon/Angry_Birds_Friends_d7ff71.jpg"
+                alt="Angry Birds Friends">
+            </div>
+            <div class="content_info">
+              <p>Angry Birds Friends</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/lazyload.js"></script>
+  <script>
+    lazyload()
+  </script>
+  <script>
+
+      // Mobile Navigation Toggle Script
+      // Add this script to your HTML file or include it as a separate JS file
+
+      (function () {
+        'use strict';
+
+        let isInitialized = false;
+
+        function initMobileMenu() {
+          // Prevent multiple initializations
+          if (isInitialized) return;
+
+          // Get elements
+          const aside = document.querySelector('.aside');
+          const header = document.querySelector('.aside .header');
+          const context = document.querySelector('.aside .context');
+          const footer = document.querySelector('.aside .footer');
+
+          if (!aside || !header || !context) {
+            console.log('Required elements not found');
+            return;
+          }
+
+          // Remove any existing mobile menu elements
+          const existingToggle = document.querySelector('.mobile-menu-toggle');
+          const existingClose = document.querySelector('.mobile-menu-close');
+          const existingOverlay = document.querySelector('.mobile-menu-overlay');
+          const existingMobileFooter = document.querySelector('.mobile-footer-box');
+
+          if (existingToggle) existingToggle.remove();
+          if (existingClose) existingClose.remove();
+          if (existingOverlay) existingOverlay.remove();
+          if (existingMobileFooter) existingMobileFooter.remove();
+
+          // Create three dots button
+          const toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-menu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Open menu');
+          toggleBtn.type = 'button';
+          header.appendChild(toggleBtn);
+
+          // Create close button
+          const closeBtn = document.createElement('button');
+          closeBtn.className = 'mobile-menu-close';
+          closeBtn.setAttribute('aria-label', 'Close menu');
+          closeBtn.type = 'button';
+          document.body.appendChild(closeBtn);
+
+          // Create overlay
+          const overlay = document.createElement('div');
+          overlay.className = 'mobile-menu-overlay';
+          document.body.appendChild(overlay);
+
+          // Create mobile footer box (clone from original footer)
+          if (footer) {
+            const mobileFooterBox = document.createElement('div');
+            mobileFooterBox.className = 'mobile-footer-box';
+
+            // Get the small_box from footer
+            const footerSmallBox = footer.querySelector('.small_box');
+            if (footerSmallBox) {
+              mobileFooterBox.innerHTML = footerSmallBox.innerHTML;
+            }
+
+            // Append mobile footer box at the end of context
+            context.appendChild(mobileFooterBox);
+          }
+
+          // Open menu function
+          function openMenu(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Opening menu');
+
+            // Hide three dots button
+            toggleBtn.classList.add('hide');
+
+            // Show menu
+            context.classList.add('active');
+            overlay.classList.add('active');
+            closeBtn.classList.add('show');
+            document.body.classList.add('menu-open');
+          }
+
+          // Close menu function
+          function closeMenu(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Closing menu');
+
+            // Hide menu
+            context.classList.remove('active');
+            overlay.classList.remove('active');
+            closeBtn.classList.remove('show');
+            document.body.classList.remove('menu-open');
+
+            // Show three dots button again
+            setTimeout(function () {
+              toggleBtn.classList.remove('hide');
+            }, 300);
+          }
+
+          // Add event listeners
+          toggleBtn.addEventListener('click', openMenu);
+          toggleBtn.addEventListener('touchend', function (e) {
+            e.preventDefault();
+            openMenu(e);
+          });
+
+          closeBtn.addEventListener('click', closeMenu);
+          closeBtn.addEventListener('touchend', function (e) {
+            e.preventDefault();
+            closeMenu(e);
+          });
+
+          overlay.addEventListener('click', closeMenu);
+          overlay.addEventListener('touchend', function (e) {
+            e.preventDefault();
+            closeMenu(e);
+          });
+
+          // Close menu on ESC key
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && context.classList.contains('active')) {
+              closeMenu(e);
+            }
+          });
+
+          // Close menu when clicking on a navigation link
+          const menuLinks = context.querySelectorAll('a');
+          menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+              setTimeout(function () {
+                if (context.classList.contains('active')) {
+                  const fakeEvent = { preventDefault: function () { }, stopPropagation: function () { } };
+                  closeMenu(fakeEvent);
+                }
+              }, 200);
+            });
+          });
+
+          isInitialized = true;
+          console.log('Mobile menu initialized successfully');
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initMobileMenu);
+        } else {
+          initMobileMenu();
+        }
+
+        // Reinitialize on window resize for safety
+        let resizeTimer;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () {
+            if (window.innerWidth <= 768 && !isInitialized) {
+              initMobileMenu();
+            }
+          }, 250);
+        });
+
+      })();
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+    integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+    data-cf-beacon='{"version":"2024.11.0","token":"2d0e241130bf4b05b6cb445ce454da0a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>
 </body>
 
 <!-- Mirrored from freeonlineplays.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Dec 2025 09:03:03 GMT -->
+
 </html>

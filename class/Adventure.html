@@ -9,18 +9,12 @@
     <meta name="description" content="Civilitythegame with a simple and intuitive interface, you can easily browse and download the latest popular games. We focus not only on the quality of our games but also on the user experience, providing a strong community to allow you to communicate and share your experiences with other players. Join us and start your gaming journey for endless hours of fun!">
     <title>Open the door to unlimited fun! A global bash to make your gaming heroes legendary! Join us and unleash your gaming potential!</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/iconfont.css">
+         <link rel="stylesheet" href="../css/iconfont.css">
     <link rel="shortcut icon" href="../404.html">
-<style>
-      #link {
-        display: none;
-      }
-
-      div.content {
-        position: fixed;
-        top: 50%;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/class-responsive.css">
+    <link rel="shortcut icon" href="../img/favicon.png">
+<!-- Google Ad Manager GPT -->
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 
     <!-- Google tag (gtag.js) --> 
@@ -42,65 +36,128 @@ gtag('config', 'AW-17830652928');
 </script> 
 
 
-      <script type="text/javascript"> 
-    function reward(event, url, type) {
-        document.querySelector(".body-loading").style.display = "flex";
-          setTimeout(function(){
-            showTip(url, type);
-          } , 5000);
-    }
-    function showTip(url, type) { 
-fbq('track', 'Lead');
-        document.querySelector(".body-loading .loader").style.display = "none";
-        document.querySelector(".tooltip").style.display = "block";
-        let text = type === "apple" ? "App Store" : "Google Play";
-        document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
-        document.querySelector(".tooltip-button-continue").href = url;
-        document
-            .querySelector(".tooltip-button-cancel")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-                window.location.reload();
-            });
-        document
-            .querySelector(".tooltip-button-continue")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-            });
+    
 
-
-        try{
-          gtag('event', 'conversion', {'send_to':  'AW-17830652928/UHN4CKeii9cbEIDYqLZC'});
-        }catch(e){
-          console.log(e);
+      <script type="text/javascript">
+        function reward(event, url, type) {
+            document.querySelector(".body-loading").style.display = "flex";
+            setTimeout(function () {
+                showTip(url, type);
+            }, 5000);
         }
-    }
+        function showTip(url, type) {
+            fbq('track', 'Lead');
+            document.querySelector(".body-loading .loader").style.display = "none";
+            document.querySelector(".tooltip").style.display = "block";
+            let text = type === "apple" ? "App Store" : "Google Play";
+            document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
+            document.querySelector(".tooltip-button-continue").href = url;
+            document
+                .querySelector(".tooltip-button-cancel")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                    window.location.reload();
+                });
+            document
+                .querySelector(".tooltip-button-continue")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                });
+
+
+            try {
+                gtag('event', 'conversion', { 'send_to': 'AW-17830652928/UHN4CKeii9cbEIDYqLZC' });
+            } catch (e) {
+                console.log(e);
+            }
+        }
 
     </script>
 
- 
+<!-- Google GPT -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
-
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
     <script>
         window.googletag = window.googletag || { cmd: [] };
+
         googletag.cmd.push(function () {
-            googletag.defineSlot('/23330730517/freeonlineplays.com_d1', [336, 280], 'div-gpt-ad-1766468198292-0').addService(googletag.pubads());
-            googletag.pubads().collapseEmptyDivs();
+
+            /* Responsive Size Mapping */
+            var mapping = googletag.sizeMapping()
+                .addSize([1024, 0], [[970, 250], [970, 90], [728, 90]])
+                .addSize([768, 0], [[728, 90], [300, 250]])
+                .addSize([0, 0], [[300, 250], [320, 480]])
+                .build();
+
+            function defineAd(path, id) {
+                googletag.defineSlot(
+                    path,
+                    [[970, 250], [970, 90], [728, 90], [300, 250], [320, 480]],
+                    id
+                ).defineSizeMapping(mapping)
+                    .addService(googletag.pubads());
+            }
+
+            /* Ad Slots */
+            defineAd('/23330730517/freeonlineplays.com_d1', 'div-gpt-ad-1766468198292-0');
+            defineAd('/23330730517/freeonlineplays.com_d2', 'div-gpt-ad-1766468250120-0');
+            defineAd('/23330730517/freeonlineplays.com_d3', 'div-gpt-ad-1766468285021-0');
+
+            /* Lazy Load */
+            googletag.pubads().enableLazyLoad({
+                fetchMarginPercent: 400,
+                renderMarginPercent: 200,
+                mobileScaling: 2
+            });
+
+            googletag.pubads().enableSingleRequest();
             googletag.enableServices();
         });
     </script>
+
+    <style>
+        /* ================= ADS CSS ================= */
+
+        .ad_box {
+            width: 100% !important;
+            text-align: center;
+            margin: 18px auto;
+        }
+
+        /* AD CONTAINER */
+        .ad-slot {
+            width: 100% !important;
+            margin: 0 auto;
+            min-height: 250px;
+            /* REQUIRED for lazy load */
+        }
+
+        /* Desktop */
+        @media (min-width:1024px) {
+            .ad-slot {
+                min-height: 90px;
+            }
+        }
+
+        /* Tablet */
+        @media (min-width:768px) and (max-width:1023px) {
+            .ad-slot {
+                min-height: 90px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width:767px) {
+            .ad-slot {
+                min-height: 250px;
+            }
+        }
+    </style>
+
+
 </head>
 <body>
-   <!-- Google tag (gtag.js) 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830652928"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'AW-17830652928');
-</script> -->
-
+  
 
 
     
@@ -115,7 +172,7 @@ gtag('config', 'AW-17830652928');
 </a>
 </div>
 <div class="search_box" > 
-<form action="https://www.freeonlineplays.com/search.html?q=">
+<form action="https://www.skillgame24.com/search.html?q=">
 <input class="search_input" id="searchB" name="q" type="text" autocomplete="false" placeholder="Search games...">
 <button type="submit"><i class="iconfont icon-sousuo"></i></button>
 </form>
@@ -213,21 +270,16 @@ gtag('config', 'AW-17830652928');
             <div class="s_box">
                 <h3 class="title grey" style="font-weight: 400">Adventure games</h3>
                 <div class="gri">
-                    <div class="ad">
-                        <div style="width: 336px;height: 280px;">
-                            <!-- /23330730517/freeonlineplays.com_d1 -->
-                            <div id='div-gpt-ad-1766468198292-0' style='min-width: 336px; min-height: 280px;'>
-                                <script>
-                                    googletag.cmd.push(function () { googletag.display('div-gpt-ad-1766468198292-0'); });
-                                </script>
-                            </div>
-                        </div>
-                        <p>Advertisement</p>
-                    </div>
+                  <!-- div 1  -->
+<div class="ad_box">
+    <div id="div-gpt-ad-1766468198292-0" class="ad-slot"></div>
+    <p>Advertisement</p>
+</div>
+
 
                     <a href="../game/Terraria.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Terraria_e8b290.jpg" alt="Terraria">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Terraria_e8b290.jpg" alt="Terraria">
 </div>
 <div class="content_info">
 <p>Terraria</p>
@@ -235,7 +287,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Don_t_Starve__Pocket_Edition.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Don_t_Starve__Pocket_Edition_878a55.png" alt="Don&apos;t Starve: Pocket Edition">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Don_t_Starve__Pocket_Edition_878a55.png" alt="Don&apos;t Starve: Pocket Edition">
 </div>
 <div class="content_info">
 <p>Don&apos;t Starve: Pocket Edition</p>
@@ -243,7 +295,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Human__Fall_Flat.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Human__Fall_Flat_72b7b7.png" alt="Human: Fall Flat">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Human__Fall_Flat_72b7b7.png" alt="Human: Fall Flat">
 </div>
 <div class="content_info">
 <p>Human: Fall Flat</p>
@@ -251,7 +303,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Bendy_and_the_Ink_Machine.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Bendy_and_the_Ink_Machine_db4958.png" alt="Bendy and the Ink Machine">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Bendy_and_the_Ink_Machine_db4958.png" alt="Bendy and the Ink Machine">
 </div>
 <div class="content_info">
 <p>Bendy and the Ink Machine</p>
@@ -259,7 +311,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Kick_The_Buddy__Second_Kick.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Kick_The_Buddy__Second_Kick_028750.jpg" alt="Kick The Buddy: Second Kick">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Kick_The_Buddy__Second_Kick_028750.jpg" alt="Kick The Buddy: Second Kick">
 </div>
 <div class="content_info">
 <p>Kick The Buddy: Second Kick</p>
@@ -267,7 +319,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/PlayTime_io__All_Jumpscare.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/PlayTime.io__All_Jumpscare_e3f154.jpg" alt="PlayTime.io: All Jumpscare">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/PlayTime.io__All_Jumpscare_e3f154.jpg" alt="PlayTime.io: All Jumpscare">
 </div>
 <div class="content_info">
 <p>PlayTime.io: All Jumpscare</p>
@@ -275,7 +327,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Bed_Wars.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Bed_Wars_67ba25.jpg" alt="Bed Wars">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Bed_Wars_67ba25.jpg" alt="Bed Wars">
 </div>
 <div class="content_info">
 <p>Bed Wars</p>
@@ -283,7 +335,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Moba_League_PvP_Trainer.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Moba_League_PvP_Trainer_556e40.jpg" alt="Moba League:PvP Trainer">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Moba_League_PvP_Trainer_556e40.jpg" alt="Moba League:PvP Trainer">
 </div>
 <div class="content_info">
 <p>Moba League:PvP Trainer</p>
@@ -291,7 +343,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Whiteout_Survival.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Whiteout_Survival_91db05.jpg" alt="Whiteout Survival">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Whiteout_Survival_91db05.jpg" alt="Whiteout Survival">
 </div>
 <div class="content_info">
 <p>Whiteout Survival</p>
@@ -299,7 +351,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Kingshot.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Kingshot_9a4807.jpg" alt="Kingshot">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Kingshot_9a4807.jpg" alt="Kingshot">
 </div>
 <div class="content_info">
 <p>Kingshot</p>
@@ -307,7 +359,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Vita_Fighters.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Vita_Fighters_ed389b.jpg" alt="Vita Fighters">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Vita_Fighters_ed389b.jpg" alt="Vita Fighters">
 </div>
 <div class="content_info">
 <p>Vita Fighters</p>
@@ -315,7 +367,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/After_Inc_.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/After_Inc._ffeb5f.jpg" alt="After Inc.">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/After_Inc._ffeb5f.jpg" alt="After Inc.">
 </div>
 <div class="content_info">
 <p>After Inc.</p>
@@ -323,7 +375,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Bring_You_Home.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Bring_You_Home_a065b4.jpg" alt="Bring You Home">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Bring_You_Home_a065b4.jpg" alt="Bring You Home">
 </div>
 <div class="content_info">
 <p>Bring You Home</p>
@@ -331,7 +383,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Fate_War.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Fate_War_96affe.jpg" alt="Fate War">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Fate_War_96affe.jpg" alt="Fate War">
 </div>
 <div class="content_info">
 <p>Fate War</p>
@@ -339,7 +391,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Identity_V.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Identity_V_8e31a9.jpg" alt="Identity V">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Identity_V_8e31a9.jpg" alt="Identity V">
 </div>
 <div class="content_info">
 <p>Identity V</p>
@@ -347,7 +399,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Massive_Warfare__Tanks_PvP_War.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Massive_Warfare__Tanks_PvP_War_eb9102.jpg" alt="Massive Warfare: Tanks PvP War">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Massive_Warfare__Tanks_PvP_War_eb9102.jpg" alt="Massive Warfare: Tanks PvP War">
 </div>
 <div class="content_info">
 <p>Massive Warfare: Tanks PvP War</p>
@@ -355,7 +407,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Dude_Theft_Wars_FPS_Open_world.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Dude_Theft_Wars_FPS_Open_world_ef3618.jpg" alt="Dude Theft Wars FPS Open world">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Dude_Theft_Wars_FPS_Open_world_ef3618.jpg" alt="Dude Theft Wars FPS Open world">
 </div>
 <div class="content_info">
 <p>Dude Theft Wars FPS Open world</p>
@@ -363,7 +415,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Resident_Evil_Survival_Unit.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Resident_Evil_Survival_Unit_6cef43.jpg" alt="Resident Evil Survival Unit">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Resident_Evil_Survival_Unit_6cef43.jpg" alt="Resident Evil Survival Unit">
 </div>
 <div class="content_info">
 <p>Resident Evil Survival Unit</p>
@@ -371,7 +423,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Where_Winds_Meet.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Where_Winds_Meet_71726b.jpg" alt="Where Winds Meet">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Where_Winds_Meet_71726b.jpg" alt="Where Winds Meet">
 </div>
 <div class="content_info">
 <p>Where Winds Meet</p>
@@ -379,7 +431,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Star_s_Choices__Fun_Story.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Star_s_Choices__Fun_Story_216788.jpg" alt="Star&apos;s Choices: Fun Story">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Star_s_Choices__Fun_Story_216788.jpg" alt="Star&apos;s Choices: Fun Story">
 </div>
 <div class="content_info">
 <p>Star&apos;s Choices: Fun Story</p>
@@ -387,7 +439,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Very_Little_Nightmares.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Very_Little_Nightmares_6ff3aa.jpg" alt="Very Little Nightmares">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Very_Little_Nightmares_6ff3aa.jpg" alt="Very Little Nightmares">
 </div>
 <div class="content_info">
 <p>Very Little Nightmares</p>
@@ -395,7 +447,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Dead_Cells.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Dead_Cells_6c7d83.jpg" alt="Dead Cells">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Dead_Cells_6c7d83.jpg" alt="Dead Cells">
 </div>
 <div class="content_info">
 <p>Dead Cells</p>
@@ -403,7 +455,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Ultimate_Custom_Night.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Ultimate_Custom_Night_db3b86.jpg" alt="Ultimate Custom Night">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Ultimate_Custom_Night_db3b86.jpg" alt="Ultimate Custom Night">
 </div>
 <div class="content_info">
 <p>Ultimate Custom Night</p>
@@ -411,7 +463,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Top_War__Battle_Game.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Top_War__Battle_Game_950f48.jpg" alt="Top War: Battle Game">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Top_War__Battle_Game_950f48.jpg" alt="Top War: Battle Game">
 </div>
 <div class="content_info">
 <p>Top War: Battle Game</p>
@@ -419,7 +471,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Lords_Mobile__Kingdom_Wars.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Lords_Mobile__Kingdom_Wars_5c061f.jpg" alt="Lords Mobile: Kingdom Wars">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Lords_Mobile__Kingdom_Wars_5c061f.jpg" alt="Lords Mobile: Kingdom Wars">
 </div>
 <div class="content_info">
 <p>Lords Mobile: Kingdom Wars</p>
@@ -427,7 +479,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Last_Shelter__Survival.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Last_Shelter__Survival_5bdbc2.jpg" alt="Last Shelter: Survival">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Last_Shelter__Survival_5bdbc2.jpg" alt="Last Shelter: Survival">
 </div>
 <div class="content_info">
 <p>Last Shelter: Survival</p>
@@ -435,7 +487,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Pok_mon_GO.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Pokémon_GO_fcfce7.jpg" alt="Pokémon GO">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Pokémon_GO_fcfce7.jpg" alt="Pokémon GO">
 </div>
 <div class="content_info">
 <p>Pokémon GO</p>
@@ -443,7 +495,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Five_Nights_at_Freddy_s.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_f94993.jpg" alt="Five Nights at Freddy&apos;s">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_f94993.jpg" alt="Five Nights at Freddy&apos;s">
 </div>
 <div class="content_info">
 <p>Five Nights at Freddy&apos;s</p>
@@ -451,7 +503,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Among_Us.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Among_Us_f96bec.jpg" alt="Among Us">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Among_Us_f96bec.jpg" alt="Among Us">
 </div>
 <div class="content_info">
 <p>Among Us</p>
@@ -459,7 +511,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Poppy_Playtime_Chapter_1.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Poppy_Playtime_Chapter_1_f697c5.jpg" alt="Poppy Playtime Chapter 1">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Poppy_Playtime_Chapter_1_f697c5.jpg" alt="Poppy Playtime Chapter 1">
 </div>
 <div class="content_info">
 <p>Poppy Playtime Chapter 1</p>
@@ -467,7 +519,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Five_Nights_at_Freddy_s_2.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_2_8e6567.jpg" alt="Five Nights at Freddy&apos;s 2">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_2_8e6567.jpg" alt="Five Nights at Freddy&apos;s 2">
 </div>
 <div class="content_info">
 <p>Five Nights at Freddy&apos;s 2</p>
@@ -477,12 +529,17 @@ gtag('config', 'AW-17830652928');
 
                 </div>
             </div>
+ <!-- div 2  -->
+<div class="ad_box">
+    <div id="div-gpt-ad-1766468250120-0" class="ad-slot"></div>
+    <p>Advertisement</p>
+</div>
             <div class="s_box">
                 <h3 class="title grey">Popular Now</h3>
                 <div class="box_two">
                     <a href="../game/Five_Nights_at_Freddy_s_2.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_2_8e6567.jpg" alt="Five Nights at Freddy&apos;s 2">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_2_8e6567.jpg" alt="Five Nights at Freddy&apos;s 2">
 </div>
 <div class="text">
 <h3>Five Nights at Freddy&apos;s 2</h3>
@@ -491,10 +548,16 @@ gtag('config', 'AW-17830652928');
 <span><i class="iconfont icon-play"></i>1412</span>
 </p>
 </div>
+<!-- div 3 -->
+<div class="ad_box">
+    <div id="div-gpt-ad-1766468285021-0" class="ad-slot"></div>
+    <p>Advertisement</p>
+</div>
+
 </a>
 <a href="../game/Minecraft.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Minecraft_94858e.jpg" alt="Minecraft">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Minecraft_94858e.jpg" alt="Minecraft">
 </div>
 <div class="text">
 <h3>Minecraft</h3>
@@ -506,7 +569,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Genshin_Impact.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Genshin_Impact_fdce10.jpg" alt="Genshin Impact">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Genshin_Impact_fdce10.jpg" alt="Genshin Impact">
 </div>
 <div class="text">
 <h3>Genshin Impact</h3>
@@ -518,7 +581,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Getting_Over_It.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Getting_Over_It_7c4650.jpg" alt="Getting Over It">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Getting_Over_It_7c4650.jpg" alt="Getting Over It">
 </div>
 <div class="text">
 <h3>Getting Over It</h3>
@@ -530,7 +593,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Among_Us.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Among_Us_f96bec.jpg" alt="Among Us">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Among_Us_f96bec.jpg" alt="Among Us">
 </div>
 <div class="text">
 <h3>Among Us</h3>
@@ -542,7 +605,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Subway_Surfers.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Subway_Surfers_d452af.jpg" alt="Subway Surfers">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Subway_Surfers_d452af.jpg" alt="Subway Surfers">
 </div>
 <div class="text">
 <h3>Subway Surfers</h3>
@@ -564,8 +627,50 @@ gtag('config', 'AW-17830652928');
     <script>
         lazyload()
     </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2d0e241130bf4b05b6cb445ce454da0a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+          <script>
+    document.addEventListener('DOMContentLoaded', function () {
 
-<!-- Mirrored from www.civilitythegame.com/class/Adventure.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Dec 2025 09:04:52 GMT -->
+        const adIds = [
+            'div-gpt-ad-1766468198292-0', // D1
+            'div-gpt-ad-1766468250120-0', // D2
+            'div-gpt-ad-1766468285021-0'  // D3
+        ];
+
+        let isOverAd = false;
+
+        adIds.forEach(function (id) {
+            const adEl = document.getElementById(id);
+            if (!adEl) return;
+
+            adEl.addEventListener('mouseenter', function () {
+                isOverAd = true;
+            });
+
+            adEl.addEventListener('mouseleave', function () {
+                isOverAd = false;
+            });
+        });
+
+        window.addEventListener('blur', function () {
+            if (isOverAd) {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    event: 'detail_ck'
+                });
+            }
+        });
+
+    });
+</script>
+<script>
+    googletag.cmd.push(function () {
+        googletag.display('div-gpt-ad-1766468198292-0');
+        googletag.display('div-gpt-ad-1766468250120-0');
+        googletag.display('div-gpt-ad-1766468285021-0');
+    });
+</script>
+  
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2d0e241130bf4b05b6cb445ce454da0a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+
 </html>

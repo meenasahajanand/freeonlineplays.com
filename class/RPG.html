@@ -9,98 +9,159 @@
     <meta name="description" content="Civilitythegame with a simple and intuitive interface, you can easily browse and download the latest popular games. We focus not only on the quality of our games but also on the user experience, providing a strong community to allow you to communicate and share your experiences with other players. Join us and start your gaming journey for endless hours of fun!">
     <title>Open the door to unlimited fun! A global bash to make your gaming heroes legendary! Join us and unleash your gaming potential!</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/iconfont.css">
+        <link rel="stylesheet" href="../css/iconfont.css">
     <link rel="shortcut icon" href="../404.html">
-<style>
-      #link {
-        display: none;
-      }
-
-      div.content {
-        position: fixed;
-        top: 50%;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/class-responsive.css">
+    <link rel="shortcut icon" href="../img/favicon.png">
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
 
-    <!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-P66454XE6E"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'G-P66454XE6E');
-</script> 
+ <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P66454XE6E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-P66454XE6E');
+    </script>
 
-<!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830652928"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'AW-17830652928');
-</script> 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830652928"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17830652928');
+    </script>
 
 
     
-  <script type="text/javascript"> 
-    function reward(event, url, type) {
-        document.querySelector(".body-loading").style.display = "flex";
-          setTimeout(function(){
-            showTip(url, type);
-          } , 5000);
-    }
-    function showTip(url, type) { 
-fbq('track', 'Lead');
-        document.querySelector(".body-loading .loader").style.display = "none";
-        document.querySelector(".tooltip").style.display = "block";
-        let text = type === "apple" ? "App Store" : "Google Play";
-        document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
-        document.querySelector(".tooltip-button-continue").href = url;
-        document
-            .querySelector(".tooltip-button-cancel")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-                window.location.reload();
-            });
-        document
-            .querySelector(".tooltip-button-continue")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-            });
 
-
-        try{
-          gtag('event', 'conversion', {'send_to':  'AW-17830652928/UHN4CKeii9cbEIDYqLZC'});
-        }catch(e){
-          console.log(e);
+      <script type="text/javascript">
+        function reward(event, url, type) {
+            document.querySelector(".body-loading").style.display = "flex";
+            setTimeout(function () {
+                showTip(url, type);
+            }, 5000);
         }
-    }
+        function showTip(url, type) {
+            fbq('track', 'Lead');
+            document.querySelector(".body-loading .loader").style.display = "none";
+            document.querySelector(".tooltip").style.display = "block";
+            let text = type === "apple" ? "App Store" : "Google Play";
+            document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
+            document.querySelector(".tooltip-button-continue").href = url;
+            document
+                .querySelector(".tooltip-button-cancel")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                    window.location.reload();
+                });
+            document
+                .querySelector(".tooltip-button-continue")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                });
+
+
+            try {
+                gtag('event', 'conversion', { 'send_to': 'AW-17830652928/UHN4CKeii9cbEIDYqLZC' });
+            } catch (e) {
+                console.log(e);
+            }
+        }
 
     </script>
 
 
+  <!-- Google GPT -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
     <script>
         window.googletag = window.googletag || { cmd: [] };
+
         googletag.cmd.push(function () {
-            googletag.defineSlot('/23330730517/freeonlineplays.com_d1', [336, 280], 'div-gpt-ad-1766468198292-0').addService(googletag.pubads());
-            googletag.pubads().collapseEmptyDivs();
+
+            /* Responsive Size Mapping */
+            var mapping = googletag.sizeMapping()
+                .addSize([1024, 0], [[970, 250], [970, 90], [728, 90]])
+                .addSize([768, 0], [[728, 90], [300, 250]])
+                .addSize([0, 0], [[300, 250], [320, 480]])
+                .build();
+
+            function defineAd(path, id) {
+                googletag.defineSlot(
+                    path,
+                    [[970, 250], [970, 90], [728, 90], [300, 250], [320, 480]],
+                    id
+                ).defineSizeMapping(mapping)
+                    .addService(googletag.pubads());
+            }
+
+            /* Ad Slots */
+            defineAd('/23330730517/freeonlineplays.com_d1', 'div-gpt-ad-1766468198292-0');
+            defineAd('/23330730517/freeonlineplays.com_d2', 'div-gpt-ad-1766468250120-0');
+            defineAd('/23330730517/freeonlineplays.com_d3', 'div-gpt-ad-1766468285021-0');
+
+            /* Lazy Load */
+            googletag.pubads().enableLazyLoad({
+                fetchMarginPercent: 400,
+                renderMarginPercent: 200,
+                mobileScaling: 2
+            });
+
+            googletag.pubads().enableSingleRequest();
             googletag.enableServices();
         });
     </script>
+
+    <style>
+        /* ================= ADS CSS ================= */
+
+        .ad_box {
+            width: 100% !important;
+            text-align: center;
+            margin: 18px auto;
+        }
+
+        /* AD CONTAINER */
+        .ad-slot {
+            width: 100% !important;
+            margin: 0 auto;
+            min-height: 250px;
+            /* REQUIRED for lazy load */
+        }
+
+        /* Desktop */
+        @media (min-width:1024px) {
+            .ad-slot {
+                min-height: 90px;
+            }
+        }
+
+        /* Tablet */
+        @media (min-width:768px) and (max-width:1023px) {
+            .ad-slot {
+                min-height: 90px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width:767px) {
+            .ad-slot {
+                min-height: 250px;
+            }
+        }
+    </style>
+
+
 </head>
 <body>
-   <!-- Google tag (gtag.js) 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830652928"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'AW-17830652928');
-</script> -->
-
+    <!-- Google Tag Manager (noscript) -->
+<!-- <noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53DGMKRX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> -->
+<!-- End Google Tag Manager (noscript) -->
 
 
     
@@ -115,7 +176,7 @@ gtag('config', 'AW-17830652928');
 </a>
 </div>
 <div class="search_box" > 
-<form action="https://www.freeonlineplays.com/search.html?q=">
+<form action="https://www.skillgame24.com/search.html?q=">
 <input class="search_input" id="searchB" name="q" type="text" autocomplete="false" placeholder="Search games...">
 <button type="submit"><i class="iconfont icon-sousuo"></i></button>
 </form>
@@ -213,21 +274,16 @@ gtag('config', 'AW-17830652928');
             <div class="s_box">
                 <h3 class="title grey" style="font-weight: 400">RPG games</h3>
                 <div class="gri">
-                    <div class="ad">
-                        <div style="width: 336px;height: 280px;">
-                           <!-- /23330730517/freeonlineplays.com_d1 -->
-                            <div id='div-gpt-ad-1766468198292-0' style='min-width: 336px; min-height: 280px;'>
-                                <script>
-                                    googletag.cmd.push(function () { googletag.display('div-gpt-ad-1766468198292-0'); });
-                                </script>
-                            </div>
-                        </div>
-                        <p>Advertisement</p>
-                    </div>
+                   <!-- div 1  -->
+<div class="ad_box">
+    <div id="div-gpt-ad-1766468198292-0" class="ad-slot"></div>
+    <p>Advertisement</p>
+</div>
+
 
                     <a href="../game/GODDESS_OF_VICTORY__NIKKE.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/GODDESS_OF_VICTORY__NIKKE_bb5064.jpg" alt="GODDESS OF VICTORY: NIKKE">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/GODDESS_OF_VICTORY__NIKKE_bb5064.jpg" alt="GODDESS OF VICTORY: NIKKE">
 </div>
 <div class="content_info">
 <p>GODDESS OF VICTORY: NIKKE</p>
@@ -235,7 +291,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Age_of_Origins.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Age_of_Origins_4583f8.jpg" alt="Age of Origins">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Age_of_Origins_4583f8.jpg" alt="Age of Origins">
 </div>
 <div class="content_info">
 <p>Age of Origins</p>
@@ -243,7 +299,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/The_Grand_Mafia.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/The_Grand_Mafia_6c7915.jpg" alt="The Grand Mafia">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/The_Grand_Mafia_6c7915.jpg" alt="The Grand Mafia">
 </div>
 <div class="content_info">
 <p>The Grand Mafia</p>
@@ -251,7 +307,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/RAID__Shadow_Legends.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/RAID__Shadow_Legends_ba2655.jpg" alt="RAID: Shadow Legends">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/RAID__Shadow_Legends_ba2655.jpg" alt="RAID: Shadow Legends">
 </div>
 <div class="content_info">
 <p>RAID: Shadow Legends</p>
@@ -259,7 +315,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Legend_of_Slime__Idle_RPG_War.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Legend_of_Slime__Idle_RPG_War_5954f1.jpg" alt="Legend of Slime: Idle RPG War">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Legend_of_Slime__Idle_RPG_War_5954f1.jpg" alt="Legend of Slime: Idle RPG War">
 </div>
 <div class="content_info">
 <p>Legend of Slime: Idle RPG War</p>
@@ -267,7 +323,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Hero_Wars___Fantasy_Battles.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Hero_Wars_–_Fantasy_Battles_f0d0de.jpg" alt="Hero Wars – Fantasy Battles">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Hero_Wars_–_Fantasy_Battles_f0d0de.jpg" alt="Hero Wars – Fantasy Battles">
 </div>
 <div class="content_info">
 <p>Hero Wars – Fantasy Battles</p>
@@ -275,7 +331,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Epic_Seven.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Epic_Seven_8e6a59.jpg" alt="Epic Seven">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Epic_Seven_8e6a59.jpg" alt="Epic Seven">
 </div>
 <div class="content_info">
 <p>Epic Seven</p>
@@ -283,7 +339,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/State_of_Survival__Zombie_War.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/State_of_Survival__Zombie_War_43c723.jpg" alt="State of Survival: Zombie War">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/State_of_Survival__Zombie_War_43c723.jpg" alt="State of Survival: Zombie War">
 </div>
 <div class="content_info">
 <p>State of Survival: Zombie War</p>
@@ -291,7 +347,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/West_Game.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/West_Game_6fc37c.png" alt="West Game">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/West_Game_6fc37c.png" alt="West Game">
 </div>
 <div class="content_info">
 <p>West Game</p>
@@ -299,7 +355,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/AFK_Arena.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/AFK_Arena_0d0e0c.jpg" alt="AFK Arena">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/AFK_Arena_0d0e0c.jpg" alt="AFK Arena">
 </div>
 <div class="content_info">
 <p>AFK Arena</p>
@@ -307,7 +363,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Mafia_City.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Mafia_City_825472.jpg" alt="Mafia City">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Mafia_City_825472.jpg" alt="Mafia City">
 </div>
 <div class="content_info">
 <p>Mafia City</p>
@@ -315,7 +371,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Hitman_Sniper.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Hitman_Sniper_a8051b.jpg" alt="Hitman Sniper">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Hitman_Sniper_a8051b.jpg" alt="Hitman Sniper">
 </div>
 <div class="content_info">
 <p>Hitman Sniper</p>
@@ -323,7 +379,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Call_of_Duty___Mobile.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Call_of_Duty___Mobile_d020b0.jpg" alt="Call of Duty®: Mobile">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Call_of_Duty___Mobile_d020b0.jpg" alt="Call of Duty®: Mobile">
 </div>
 <div class="content_info">
 <p>Call of Duty®: Mobile</p>
@@ -331,7 +387,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Arknights.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Arknights_47baef.jpg" alt="Arknights">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Arknights_47baef.jpg" alt="Arknights">
 </div>
 <div class="content_info">
 <p>Arknights</p>
@@ -339,7 +395,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Devil_May_Cry__Peak_of_Combat.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Devil_May_Cry__Peak_of_Combat_3b6d64.jpg" alt="Devil May Cry: Peak of Combat">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Devil_May_Cry__Peak_of_Combat_3b6d64.jpg" alt="Devil May Cry: Peak of Combat">
 </div>
 <div class="content_info">
 <p>Devil May Cry: Peak of Combat</p>
@@ -347,7 +403,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/AFK_Journey.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/AFK_Journey_ca62fe.jpg" alt="AFK Journey">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/AFK_Journey_ca62fe.jpg" alt="AFK Journey">
 </div>
 <div class="content_info">
 <p>AFK Journey</p>
@@ -355,7 +411,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Zenless_Zone_Zero.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Zenless_Zone_Zero_bda75c.jpg" alt="Zenless Zone Zero">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Zenless_Zone_Zero_bda75c.jpg" alt="Zenless Zone Zero">
 </div>
 <div class="content_info">
 <p>Zenless Zone Zero</p>
@@ -363,7 +419,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/BattleCry__World_War_Game_RPG.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/BattleCry__World_War_Game_RPG_d39dd6.jpg" alt="BattleCry: World War Game RPG">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/BattleCry__World_War_Game_RPG_d39dd6.jpg" alt="BattleCry: World War Game RPG">
 </div>
 <div class="content_info">
 <p>BattleCry: World War Game RPG</p>
@@ -371,7 +427,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Umamusume__Pretty_Derby.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Umamusume__Pretty_Derby_97e79e.jpg" alt="Umamusume: Pretty Derby">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Umamusume__Pretty_Derby_97e79e.jpg" alt="Umamusume: Pretty Derby">
 </div>
 <div class="content_info">
 <p>Umamusume: Pretty Derby</p>
@@ -379,7 +435,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Delta_Force.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Delta_Force_e0a126.jpg" alt="Delta Force">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Delta_Force_e0a126.jpg" alt="Delta Force">
 </div>
 <div class="content_info">
 <p>Delta Force</p>
@@ -387,7 +443,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/CookieRun__Kingdom.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/CookieRun__Kingdom_3b3c28.jpg" alt="CookieRun: Kingdom">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/CookieRun__Kingdom_3b3c28.jpg" alt="CookieRun: Kingdom">
 </div>
 <div class="content_info">
 <p>CookieRun: Kingdom</p>
@@ -395,7 +451,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Duet_Night_Abyss.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Duet_Night_Abyss_5a057f.jpg" alt="Duet Night Abyss">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Duet_Night_Abyss_5a057f.jpg" alt="Duet Night Abyss">
 </div>
 <div class="content_info">
 <p>Duet Night Abyss</p>
@@ -403,7 +459,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/League_of_Legends__Wild_Rift.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/League_of_Legends__Wild_Rift_f31bfe.jpg" alt="League of Legends: Wild Rift">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/League_of_Legends__Wild_Rift_f31bfe.jpg" alt="League of Legends: Wild Rift">
 </div>
 <div class="content_info">
 <p>League of Legends: Wild Rift</p>
@@ -411,7 +467,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Evony__The_King_s_Return.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Evony__The_King_s_Return_f87c63.jpg" alt="Evony: The King&apos;s Return">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Evony__The_King_s_Return_f87c63.jpg" alt="Evony: The King&apos;s Return">
 </div>
 <div class="content_info">
 <p>Evony: The King&apos;s Return</p>
@@ -419,7 +475,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Soul_Strike__Idle_RPG.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Soul_Strike!_Idle_RPG_c5e3a7.jpg" alt="Soul Strike! Idle RPG">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Soul_Strike!_Idle_RPG_c5e3a7.jpg" alt="Soul Strike! Idle RPG">
 </div>
 <div class="content_info">
 <p>Soul Strike! Idle RPG</p>
@@ -427,7 +483,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Clash_of_Clans.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Clash_of_Clans_db6076.jpg" alt="Clash of Clans">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Clash_of_Clans_db6076.jpg" alt="Clash of Clans">
 </div>
 <div class="content_info">
 <p>Clash of Clans</p>
@@ -435,7 +491,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Genshin_Impact.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Genshin_Impact_fdce10.jpg" alt="Genshin Impact">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Genshin_Impact_fdce10.jpg" alt="Genshin Impact">
 </div>
 <div class="content_info">
 <p>Genshin Impact</p>
@@ -443,7 +499,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Grand_Theft_Auto__ViceCity.html">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Grand_Theft_Auto__ViceCity_1e1696.jpg" alt="Grand Theft Auto: ViceCity">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Grand_Theft_Auto__ViceCity_1e1696.jpg" alt="Grand Theft Auto: ViceCity">
 </div>
 <div class="content_info">
 <p>Grand Theft Auto: ViceCity</p>
@@ -453,12 +509,22 @@ gtag('config', 'AW-17830652928');
 
                 </div>
             </div>
+<!-- div 2  -->
+<div class="ad_box">
+    <div id="div-gpt-ad-1766468250120-0" class="ad-slot"></div>
+    <p>Advertisement</p>
+</div>
             <div class="s_box">
                 <h3 class="title grey">Popular Now</h3>
                 <div class="box_two">
                     <a href="../game/Five_Nights_at_Freddy_s_2.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_2_8e6567.jpg" alt="Five Nights at Freddy&apos;s 2">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Five_Nights_at_Freddy_s_2_8e6567.jpg" alt="Five Nights at Freddy&apos;s 2">
+</div>
+<!-- div 3 -->
+<div class="ad_box">
+    <div id="div-gpt-ad-1766468285021-0" class="ad-slot"></div>
+    <p>Advertisement</p>
 </div>
 <div class="text">
 <h3>Five Nights at Freddy&apos;s 2</h3>
@@ -470,7 +536,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Minecraft.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Minecraft_94858e.jpg" alt="Minecraft">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Minecraft_94858e.jpg" alt="Minecraft">
 </div>
 <div class="text">
 <h3>Minecraft</h3>
@@ -482,7 +548,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Genshin_Impact.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Genshin_Impact_fdce10.jpg" alt="Genshin Impact">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Genshin_Impact_fdce10.jpg" alt="Genshin Impact">
 </div>
 <div class="text">
 <h3>Genshin Impact</h3>
@@ -494,7 +560,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Getting_Over_It.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Getting_Over_It_7c4650.jpg" alt="Getting Over It">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Getting_Over_It_7c4650.jpg" alt="Getting Over It">
 </div>
 <div class="text">
 <h3>Getting Over It</h3>
@@ -506,7 +572,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Among_Us.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Among_Us_f96bec.jpg" alt="Among Us">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Among_Us_f96bec.jpg" alt="Among Us">
 </div>
 <div class="text">
 <h3>Among Us</h3>
@@ -518,7 +584,7 @@ gtag('config', 'AW-17830652928');
 </a>
 <a href="../game/Subway_Surfers.html" class="game_box">
 <div class="img">
-<img  src="https://img.civilitythegame.com/Icon/Subway_Surfers_d452af.jpg" alt="Subway Surfers">
+<img  class="lazyload" src="../../img.civilitythegame.com/img/lazyload.png" data-src="https://img.civilitythegame.com/Icon/Subway_Surfers_d452af.jpg" alt="Subway Surfers">
 </div>
 <div class="text">
 <h3>Subway Surfers</h3>
@@ -536,12 +602,222 @@ gtag('config', 'AW-17830652928');
     </div>
 
 
-    <script src="../js/lazyload.js"></script>
+     <script src="../js/lazyload.js"></script>
     <script>
         lazyload()
     </script>
+
+    <script>
+        
+        // Mobile Navigation Toggle Script
+// Add this script to your HTML file or include it as a separate JS file
+
+(function() {
+  'use strict';
+  
+  let isInitialized = false;
+  
+  function initMobileMenu() {
+    // Prevent multiple initializations
+    if (isInitialized) return;
+    
+    // Get elements
+    const aside = document.querySelector('.aside');
+    const header = document.querySelector('.aside .header');
+    const context = document.querySelector('.aside .context');
+    const footer = document.querySelector('.aside .footer');
+    
+    if (!aside || !header || !context) {
+      console.log('Required elements not found');
+      return;
+    }
+    
+    // Remove any existing mobile menu elements
+    const existingToggle = document.querySelector('.mobile-menu-toggle');
+    const existingClose = document.querySelector('.mobile-menu-close');
+    const existingOverlay = document.querySelector('.mobile-menu-overlay');
+    const existingMobileFooter = document.querySelector('.mobile-footer-box');
+    
+    if (existingToggle) existingToggle.remove();
+    if (existingClose) existingClose.remove();
+    if (existingOverlay) existingOverlay.remove();
+    if (existingMobileFooter) existingMobileFooter.remove();
+    
+    // Create three dots button
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'mobile-menu-toggle';
+    toggleBtn.setAttribute('aria-label', 'Open menu');
+    toggleBtn.type = 'button';
+    header.appendChild(toggleBtn);
+    
+    // Create close button
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'mobile-menu-close';
+    closeBtn.setAttribute('aria-label', 'Close menu');
+    closeBtn.type = 'button';
+    document.body.appendChild(closeBtn);
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-menu-overlay';
+    document.body.appendChild(overlay);
+    
+    // Create mobile footer box (clone from original footer)
+    if (footer) {
+      const mobileFooterBox = document.createElement('div');
+      mobileFooterBox.className = 'mobile-footer-box';
+      
+      // Get the small_box from footer
+      const footerSmallBox = footer.querySelector('.small_box');
+      if (footerSmallBox) {
+        mobileFooterBox.innerHTML = footerSmallBox.innerHTML;
+      }
+      
+      // Append mobile footer box at the end of context
+      context.appendChild(mobileFooterBox);
+    }
+    
+    // Open menu function
+    function openMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Opening menu');
+      
+      // Hide three dots button
+      toggleBtn.classList.add('hide');
+      
+      // Show menu
+      context.classList.add('active');
+      overlay.classList.add('active');
+      closeBtn.classList.add('show');
+      document.body.classList.add('menu-open');
+    }
+    
+    // Close menu function
+    function closeMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Closing menu');
+      
+      // Hide menu
+      context.classList.remove('active');
+      overlay.classList.remove('active');
+      closeBtn.classList.remove('show');
+      document.body.classList.remove('menu-open');
+      
+      // Show three dots button again
+      setTimeout(function() {
+        toggleBtn.classList.remove('hide');
+      }, 300);
+    }
+    
+    // Add event listeners
+    toggleBtn.addEventListener('click', openMenu);
+    toggleBtn.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      openMenu(e);
+    });
+    
+    closeBtn.addEventListener('click', closeMenu);
+    closeBtn.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      closeMenu(e);
+    });
+    
+    overlay.addEventListener('click', closeMenu);
+    overlay.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      closeMenu(e);
+    });
+    
+    // Close menu on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && context.classList.contains('active')) {
+        closeMenu(e);
+      }
+    });
+    
+    // Close menu when clicking on a navigation link
+    const menuLinks = context.querySelectorAll('a');
+    menuLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        setTimeout(function() {
+          if (context.classList.contains('active')) {
+            const fakeEvent = { preventDefault: function() {}, stopPropagation: function() {} };
+            closeMenu(fakeEvent);
+          }
+        }, 200);
+      });
+    });
+    
+    isInitialized = true;
+    console.log('Mobile menu initialized successfully');
+  }
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
+  
+  // Reinitialize on window resize for safety
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      if (window.innerWidth <= 768 && !isInitialized) {
+        initMobileMenu();
+      }
+    }, 250);
+  });
+  
+})();
+    </script>
+      
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2d0e241130bf4b05b6cb445ce454da0a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const adIds = [
+            'div-gpt-ad-1766468198292-0', // D1
+            'div-gpt-ad-1766468250120-0', // D2
+            'div-gpt-ad-1766468285021-0'  // D3
+        ];
+
+        let isOverAd = false;
+
+        adIds.forEach(function (id) {
+            const adEl = document.getElementById(id);
+            if (!adEl) return;
+
+            adEl.addEventListener('mouseenter', function () {
+                isOverAd = true;
+            });
+
+            adEl.addEventListener('mouseleave', function () {
+                isOverAd = false;
+            });
+        });
+
+        window.addEventListener('blur', function () {
+            if (isOverAd) {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    event: 'detail_ck'
+                });
+            }
+        });
+
+    });
+</script>
+<script>
+    googletag.cmd.push(function () {
+        googletag.display('div-gpt-ad-1766468198292-0');
+        googletag.display('div-gpt-ad-1766468250120-0');
+        googletag.display('div-gpt-ad-1766468285021-0');
+    });
+</script>
 
 <!-- Mirrored from www.civilitythegame.com/class/RPG.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Dec 2025 09:04:10 GMT -->
 </html>

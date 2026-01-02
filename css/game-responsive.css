@@ -1,0 +1,1546 @@
+/* ========================================
+   RESPONSIVE STYLES FOR SKILLGAME24.COM
+   Import this file after your main.css
+   ======================================== */
+
+/* Base Layout - Keep aside and section side by side */
+/* .main.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.aside {
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.section {
+    flex: 1;
+    margin-left: 20px;
+    width: 100%;
+    min-width: 0;
+}
+ Grid Layout for games 
+.gri {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.gri a,
+.gri .ad {
+    width: 100%;
+}
+
+.gri .img {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gri .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box_one {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.box_one a {
+    width: 100%;
+    margin: 0;
+}
+
+.box_one .img {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.box_one .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box_two {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.box_two a {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content_info {
+    width: 100%;
+    overflow: hidden;
+}
+
+.content_info p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ Ad container 
+.ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 280px;
+}
+
+.ad > div {
+    width: 100% !important;
+    max-width: 336px;
+    height: auto !important;
+    min-height: 280px;
+}
+
+.ad p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+ Large Desktop - 1400px and above 
+@media (min-width: 1400px) {
+    .main.container {
+        max-width: 1400px;
+    }
+    
+    .aside {
+        width: 280px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 18px;
+    }
+}
+
+ Desktop - 1200px to 1399px
+@media (max-width: 1399px) {
+    .main.container {
+        max-width: 1200px;
+    }
+    
+    .aside {
+        width: 260px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+}
+
+Laptop - 992px to 1199px
+@media (max-width: 1199px) {
+    .main.container {
+        max-width: 1140px;
+        padding: 0 15px;
+    }
+    
+    .aside {
+        width: 240px;
+    }
+    
+    .section {
+        margin-left: 15px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .box_two {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 10px;
+    }
+}
+
+ Tablet - 768px to 991px - STILL SIDE BY SIDE 
+@media (max-width: 991px) {
+    .main.container {
+        max-width: 960px;
+        padding: 0 12px;
+    }
+    
+    .aside {
+        width: 200px;
+    }
+    
+    .section {
+        margin-left: 12px;
+    }
+    
+    .header {
+        padding: 12px 8px;
+    }
+    
+    .logo img {
+        max-width: 140px;
+    }
+    
+    .search_input {
+        font-size: 13px;
+        padding: 9px 38px 9px 10px;
+    }
+    
+    .nav ul li a,
+    .small_box ul li a {
+        font-size: 13px;
+        padding: 8px 6px;
+    }
+    
+    .small_box h3 {
+        font-size: 15px;
+    }
+    
+    .title {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 8px;
+    }
+    
+    .box_two {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .box_two a .img {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 8px;
+    }
+    
+    .box_two a .text {
+        padding: 10px;
+        flex: 1;
+    }
+    
+    .box_two a .text h3 {
+        font-size: 14px;
+    }
+    
+    .box_two a .text p span {
+        font-size: 12px;
+    }
+} */
+
+/* Mobile Landscape / Small Tablet - 576px to 767px - STACK VERTICALLY */
+@media (max-width: 767px) {
+    .main.container {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .aside {
+        width: 100%;
+        position: static;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .section {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .header {
+        padding: 15px 10px;
+    }
+    
+    .logo {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    
+    .logo img {
+        max-width: 150px;
+        height: auto;
+    }
+    
+    .search_box {
+        width: 100%;
+    }
+    
+    .search_box form {
+        width: 100%;
+    }
+    
+    .search_input {
+        font-size: 14px;
+        padding: 10px 40px 10px 15px;
+        width: 100%;
+    }
+    
+
+    
+    .nav ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .nav ul li {
+        flex: 1 1 calc(33.333% - 8px);
+        min-width: 100px;
+    }
+    
+    .nav ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5px;
+        text-align: center;
+    }
+    
+    .small_box {
+        padding: 12px;
+    }
+    
+    .small_box ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .small_box ul li {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 120px;
+    }
+    
+    .title {
+        font-size: 20px;
+        margin: 15px 0 12px;
+        padding: 0 5px;
+    }
+    
+    .s_box {
+        margin-bottom: 25px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .box_two {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .box_two a {
+        width:100%;
+        padding: 8px;
+        border-radius: 8px;
+    }
+    
+    .box_two a .img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .box_two a .text {
+        padding: 8px 12px;
+    }
+    
+    .box_two a .text h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+        line-height: 1.3;
+    }
+    
+    .box_two a .text p {
+        font-size: 13px;
+    }
+    
+    .box_two a .text p span {
+        font-size: 13px;
+        margin-right: 10px;
+    }
+    
+    .content_info p {
+        font-size: 13px;
+        padding: 8px 5px;
+    }
+    
+    .footer .small_box ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .footer .small_box ul li {
+        flex: 0 1 auto;
+    }
+    
+    .ad {
+        grid-column: 1 / -1;
+        padding: 20px;
+    }
+}
+
+/* Mobile Portrait - 480px to 575px */
+@media (max-width: 575px) {
+    .main.container {
+        padding: 0 8px;
+    }
+    .seeding_box .seeding{
+        width: 350px
+    }
+    .header {
+        padding: 12px 8px;
+    }
+    
+    .logo img {
+        max-width: 130px;
+    }
+    
+    .search_input {
+        font-size: 13px;
+        padding: 9px 38px 9px 12px;
+    }
+    
+
+    
+    .nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .nav ul li {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    
+    .nav ul li a {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 12px;
+    }
+    
+    .nav ul li a i {
+        margin-right: 8px;
+    }
+    
+    .small_box {
+        padding: 10px;
+    }
+    
+    .small_box h3 {
+        font-size: 16px;
+    }
+    
+    .small_box ul li {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    
+    .title {
+        font-size: 18px;
+        margin: 12px 0 10px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .box_two {
+        gap: 8px;
+    }
+    
+    .box_two a {
+        width:100%;
+        padding: 8px;
+    }
+    
+    .box_two a .img {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .box_two a .text {
+        padding: 6px 10px;
+    }
+    
+    .box_two a .text h3 {
+        font-size: 14px;
+    }
+    
+    .box_two a .text p span {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+    
+    .content_info p {
+        font-size: 12px;
+        padding: 6px 4px;
+    }
+    
+    .footer .small_box ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .footer .small_box ul li {
+        text-align: center;
+    }
+}
+
+/* Small Mobile - 375px to 479px */
+@media (max-width: 479px) {
+    .logo img {
+        max-width: 110px;
+    }
+    
+     .seeding_box .seeding{
+        width: 350px
+    }
+    .search_input {
+        font-size: 12px;
+        padding: 8px 36px 8px 10px;
+    }
+    
+
+    
+    .title {
+        font-size: 17px;
+        margin: 10px 0 8px;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .content_info p {
+        font-size: 12px;
+        padding: 6px 3px;
+    }
+    
+    .box_two a .img {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .box_two a .text {
+        padding: 5px 8px;
+    }
+    
+    .box_two a .text h3 {
+        font-size: 13px;
+    }
+    
+    .box_two a .text p span {
+        font-size: 11px;
+    }
+}
+
+/* Extra Small Mobile - 320px to 374px */
+@media (max-width: 374px) {
+    .main.container {
+        padding: 0 5px;
+    }
+     .seeding_box .seeding{
+        width: 350px
+    }
+    
+    .logo img {
+        max-width: 100px;
+    }
+    
+    .search_input {
+        font-size: 11px;
+        padding: 7px 34px 7px 8px;
+    }
+    
+
+    
+    .title {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+    
+    .gri {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    
+    .content_info p {
+        font-size: 11px;
+        padding: 5px 2px;
+    }
+    
+    .box_two a {
+        width:100%;
+        padding: 6px;
+    }
+    
+    .box_two a .img {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .box_two a .text {
+        padding: 4px 6px;
+    }
+    
+    .box_two a .text h3 {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+    
+    .box_two a .text p span {
+        font-size: 10px;
+        margin-right: 6px;
+    }
+    
+    .nav ul li a,
+    .small_box ul li a {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    
+    .iconfont {
+        font-size: 13px;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+    .gri {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .box_one {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .nav ul {
+        flex-direction: row;
+    }
+    
+    .nav ul li {
+        flex: 1 1 calc(33.333% - 8px);
+    }
+    
+    .small_box ul li {
+        flex: 1 1 calc(50% - 8px);
+    }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Typography */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    h4 { font-size: 16px; }
+    h5 { font-size: 14px; }
+    h6 { font-size: 13px; }
+}
+
+/* Touch-friendly for mobile */
+@media (max-width: 767px) {
+    a, button {
+        /* min-height: 44px; */
+        /* display: inline-flex; */
+        /* align-items: center;
+        justify-content: center; */
+    }
+     .seeding_box .seeding{
+        width: 350px;
+    }
+    .gri a,
+    .box_one a,
+    .box_two a {
+        width:100%;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+    }
+    
+    .gri a:active,
+    .box_one a:active,
+    .box_two a:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Scrollbar styling for aside on desktop */
+@media (min-width: 768px) {
+    .aside::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .aside::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    .aside::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+    
+    .aside::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+/* Smooth transitions */
+.aside,
+.section,
+.gri,
+.box_one,
+.box_two {
+    transition: all 0.3s ease;
+}
+
+/* Public Box Responsive Styles */
+.public_box {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.public_box .content {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.public_box h1,
+.public_box h2,
+.public_box h3,
+.public_box h4,
+.public_box h5,
+.public_box h6 {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin: 15px 0 10px;
+}
+/* 
+.public_box p {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin: 10px 0;
+    line-height: 1.6;
+} */
+
+.public_box ul,
+.public_box ol {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+.public_box li {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin: 5px 0;
+}
+
+.public_box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+}
+
+.public_box table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.public_box table td,
+.public_box table th {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.public_box pre,
+.public_box code {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.public_box iframe,
+.public_box video,
+.public_box embed,
+.public_box object {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 991px) {
+    .public_box {
+        padding: 15px;
+    }
+    
+    .public_box h1 { font-size: 24px; }
+    .public_box h2 { font-size: 22px; }
+    .public_box h3 { font-size: 20px; }
+    .public_box h4 { font-size: 18px; }
+}
+
+@media (max-width: 767px) {
+    .public_box {
+        padding: 12px 10px;
+    }
+    
+    .public_box h1 { font-size: 22px; }
+    .public_box h2 { font-size: 20px; }
+    .public_box h3 { font-size: 18px; }
+    .public_box h4 { font-size: 16px; }
+    
+    .public_box p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .public_box ul,
+    .public_box ol {
+        padding-left: 20px;
+    }
+    
+    .public_box table {
+        font-size: 13px;
+    }
+    
+    .public_box table td,
+    .public_box table th {
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 575px) {
+    .public_box {
+        padding: 10px 8px;
+    }
+    
+    .public_box h1 { font-size: 20px; }
+    .public_box h2 { font-size: 18px; }
+    .public_box h3 { font-size: 16px; }
+    .public_box h4 { font-size: 15px; }
+    
+    .public_box p {
+        font-size: 13px;
+    }
+    
+    .public_box ul,
+    .public_box ol {
+        padding-left: 18px;
+    }
+    
+    .public_box li {
+        font-size: 13px;
+    }
+    
+    .public_box table {
+        font-size: 12px;
+    }
+    
+    .public_box table td,
+    .public_box table th {
+        padding: 5px 6px;
+    }
+}
+
+@media (max-width: 374px) {
+    .public_box {
+        padding: 8px 5px;
+    }
+    
+    .public_box h1 { font-size: 18px; }
+    .public_box h2 { font-size: 16px; }
+    .public_box h3 { font-size: 15px; }
+    .public_box h4 { font-size: 14px; }
+    
+    .public_box p,
+    .public_box li {
+        font-size: 12px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .aside,
+    .search_box,
+    .footer,
+    .ad {
+        display: none !important;
+    }
+    
+    .section {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .gri,
+    .box_one,
+    .box_two {
+        page-break-inside: avoid;
+    }
+    
+    .public_box {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+/* ----------------------------------------- */
+@media (max-width: 768px) {
+    /* ADS KO LAST ME FIX KARO */
+
+.game_box .game .mm_t .ml_t h3{
+    width:50% !important;
+}
+.game_box .game .mm_t .ml_t .g_a_link .rating-bar .article{
+    width: 30% !important;
+}
+.public_box,.game_box {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+}
+.ad {
+    order: 99 !important;      
+    margin-top: 20px !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.game_box .game .game_details .details_box ul li p {
+    width: 50% !important;
+    padding-left: 0px !important;
+    font-size: 8px !important;
+    color: #838383;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 23px;
+    margin-top: 20px;
+}
+.game_box .game .game_details .buttons
+ {
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;
+    gap: 8px;
+ }
+  /* EACH DETAIL ITEM VERTICAL */
+  .details_box li {
+    /* display: flex !important;
+    flex-direction: column !important; */
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #eee !important;
+    margin-top: 20px;
+  }
+
+    /* line-height: 23px;
+  /* Label (h3) Styling */
+  .details_box li h3 {
+    font-size: 14px !important;
+    margin-bottom: 5px !important;
+    font-weight: 600 !important;
+  }
+
+  /* Value (p) Styling */
+  .details_box li p {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+  }
+
+  /* LAST BORDER REMOVE */
+  .details_box li:last-child {
+    border-bottom: none !important;
+  }
+
+  /* DETAILS CARD PADDING */
+  .details_box ul {
+    padding: 20px 10px !important;
+  }
+
+  /* IMAGE TOP */
+  .mm_t .img img {
+    margin: 0 auto 10px !important;
+  }
+
+  /* TITLE CENTER */
+  .mm_t h3 {
+    text-align: center !important;
+  }
+
+
+.game_box .game .game_details .details_box{
+width: 60%
+}
+}
+@media (max-width: 768px) {
+  .public_box {
+      gap: 30px !important;
+  }
+
+  .ad {
+      margin-top: 40px !important;
+  }
+
+  .ad_box .ad > div {
+      margin: 4px auto !important;
+  }
+}
+
+
+/* ----- */
+/* Mobile Responsive Navigation Styles */
+
+/* Hide elements by default on mobile */
+@media (max-width: 768px) {
+  .aside .search_box {
+    display: none !important;
+  }
+  
+  .aside .footer {
+    display: none !important;
+  }
+  
+  .aside .context {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background-color: #fff !important;
+    z-index: 9999 !important;
+    overflow-y: auto !important;
+    padding: 60px 20px 20px 20px !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .aside .context.active {
+    display: block !important;
+  }
+  
+  /* Show all child elements when context is active */
+  .aside .context.active .nav,
+  .aside .context.active .small_box,
+  .aside .context.active .mobile-footer-box {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Mobile footer box inside menu */
+  .mobile-footer-box {
+    display: none !important;
+    margin: 30px 0 20px 0 !important;
+  }
+  
+  .aside .context.active .mobile-footer-box {
+    display: block !important;
+  }
+  
+  .mobile-footer-box hr {
+    display: block !important;
+    border: none !important;
+    border-top: 1px solid #e0e0e0 !important;
+    margin: 20px 0 !important;
+  }
+  
+  .mobile-footer-box ul {
+    display: block !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .mobile-footer-box ul li {
+    display: block !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .mobile-footer-box ul li a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 15px !important;
+    font-size: 15px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    background-color: #f8f8f8 !important;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  .mobile-footer-box ul li a:hover,
+  .mobile-footer-box ul li a:active {
+    background-color: #e8e8e8 !important;
+  }
+  
+  .mobile-footer-box ul li a span {
+    display: inline !important;
+    font-weight: 500 !important;
+  }
+  
+  /* Three dots menu button */
+  .mobile-menu-toggle {
+    display: block !important;
+    background: none !important;
+    border: none !important;
+    font-size: 28px !important;
+    cursor: pointer !important;
+    padding: 10px !important;
+    color: #333 !important;
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 100 !important;
+    line-height: 1 !important;
+    width: 50px !important;
+    height: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: opacity 0.3s ease !important;
+  }
+  
+  .mobile-menu-toggle.hide {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+  
+  .mobile-menu-toggle:focus {
+    outline: none !important;
+  }
+  
+  /* Close button for mobile menu */
+  .mobile-menu-close {
+    display: none !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: #fff !important;
+    border: none !important;
+    font-size: 40px !important;
+    cursor: pointer !important;
+    color: #333 !important;
+    z-index: 10001 !important;
+    padding: 5px !important;
+    line-height: 1 !important;
+    width: 50px !important;
+    height: 50px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .mobile-menu-close.show {
+    display: flex !important;
+  }
+  
+  .mobile-menu-close:focus {
+    outline: none !important;
+  }
+  
+  .mobile-menu-close:active {
+    background-color: #f0f0f0 !important;
+  }
+  
+  /* Adjust header for mobile */
+  .aside .header {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 15px !important;
+  }
+  
+  .aside .logo {
+    flex: 0 0 auto !important;
+  }
+  
+  .aside .logo img {
+    max-height: 40px !important;
+    width: auto !important;
+  }
+  
+  /* Mobile menu navigation styling */
+  .aside .context .nav {
+    display: block !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .aside .context .nav ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+  
+  .aside .context .nav ul li {
+    margin-bottom: 10px !important;
+    display: block !important;
+  }
+  
+  .aside .context .nav ul li a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 15px !important;
+    font-size: 16px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    background-color: #f8f8f8 !important;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  .aside .context .nav ul li a:hover,
+  .aside .context .nav ul li a:active {
+    background-color: #e8e8e8 !important;
+  }
+  
+  .aside .context .nav ul li a i {
+    margin-right: 12px !important;
+    font-size: 20px !important;
+  }
+  
+  .aside .context .nav ul li a span {
+    font-weight: 500 !important;
+  }
+  
+  /* Small box styling in mobile */
+  .aside .context .small_box {
+    display: block !important;
+    margin: 30px 0 !important;
+  }
+  
+  .aside .context .small_box hr {
+    display: block !important;
+    border: none !important;
+    border-top: 1px solid #e0e0e0 !important;
+    margin: 20px 0 !important;
+  }
+  
+  .aside .context .small_box h3 {
+    display: block !important;
+    font-size: 18px !important;
+    margin-bottom: 15px !important;
+    color: #333 !important;
+    font-weight: 600 !important;
+  }
+  
+  .aside .context .small_box ul {
+    display: block !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .aside .context .small_box ul li {
+    display: block !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .aside .context .small_box ul li a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 15px !important;
+    font-size: 15px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    background-color: #f8f8f8 !important;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  .aside .context .small_box ul li a:hover,
+  .aside .context .small_box ul li a:active {
+    background-color: #e8e8e8 !important;
+  }
+  
+  .aside .context .small_box ul li a i {
+    margin-right: 10px !important;
+    font-size: 16px !important;
+  }
+  
+  .aside .context .small_box ul li a span {
+    display: inline !important;
+  }
+  
+  /* Overlay for mobile menu */
+  .mobile-menu-overlay {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    z-index: 9998 !important;
+  }
+  
+  .mobile-menu-overlay.active {
+    display: block !important;
+  }
+}
+
+/* Desktop view - hide mobile elements */
+@media (min-width: 769px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+  
+  .mobile-menu-close {
+    display: none !important;
+  }
+  
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+  
+  .mobile-footer-box {
+    display: none !important;
+  }
+}
+
+/* Three dots icon styles */
+.mobile-menu-toggle::before {
+  content: "⋮" !important;
+  font-size: 32px !important;
+  line-height: 1 !important;
+  font-weight: bold !important;
+}
+
+/* Close icon styles */
+.mobile-menu-close::before {
+  content: "×" !important;
+  font-size: 36px !important;
+  line-height: 1 !important;
+  font-weight: 300 !important;
+}
+
+/* Smooth transitions */
+.aside .context {
+  transition: opacity 0.3s ease-in-out !important;
+}
+
+/* Body scroll lock when menu is open */
+body.menu-open {
+  overflow: hidden !important;
+}
+
+/* ------------------------- */
+/* Mobile view mein game_box ke ads ko move karna */
+
+@media (max-width: 768px) {
+    /* Game box ke andar wale original ad_box ko hide karna */
+    .game_box .ad_box {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Section ko flex container banana */
+    .section {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Navigation ki position */
+    /* .navigation {
+        order: -1 !important;
+        margin-bottom: 15px !important;
+    } */
+
+    /* Mobile ads container - navigation ke baad */
+    .mobile_ads_top {
+        /* order: 2 !important; */
+        display: block !important;
+        width: 100% !important;
+        background-color: #ffffff !important;
+        padding: 15px !important;
+        margin: 0 0 20px 0 !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        text-align: center !important;
+    }
+
+    .mobile_ads_top .ad_content {
+        width: 100% !important;
+        max-width: 336px !important;
+        height: 280px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: #f9f9f9 !important;
+        border-radius: 4px !important;
+    }
+
+    .mobile_ads_top .ad_content > div {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .mobile_ads_top p {
+        margin-top: 10px !important;
+        font-size: 12px !important;
+        color: #999 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+    }
+
+       /* .section .public_box:first-of-type {
+        order: 2 !important;
+        margin-bottom: 20px !important;
+    } */
+
+    /* Baaki public_box normal rahe */
+    .section .public_box:not(:first-of-type) {
+        order: unset !important;
+    }
+
+    /* Additional mobile styling */
+    .section {
+        padding: 10px !important;
+    }
+
+    .game {
+        padding: 15px !important;
+    }
+}
+
+/* Desktop view - mobile ads hide */
+@media (min-width: 769px) {
+    .mobile_ads_top {
+        display: none !important;
+    }
+}
